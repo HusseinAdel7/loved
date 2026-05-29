@@ -15,7 +15,7 @@
   align-items: center;
   overflow: hidden;
   padding: 120px 20px;
-  background: radial-gradient(circle at center, rgba(43, 5, 45, 0.4) 0%, rgba(10, 1, 12, 0.8) 100%);
+  background: radial-gradient(circle at center, rgba(255, 242, 245, 0.5) 0%, rgba(255, 214, 224, 0.7) 100%);
   z-index: 1;
 }
 
@@ -25,14 +25,14 @@
 }
 
 .hero-pre-title {
-  color: var(--accent-gold);
+  color: var(--primary-color);
   font-family: var(--font-luxury);
   font-size: 1.25rem;
   letter-spacing: 4px;
   text-transform: uppercase;
   margin-bottom: 25px;
-  font-weight: 500;
-  text-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
+  font-weight: 600;
+  text-shadow: 0 0 10px rgba(255, 0, 60, 0.15);
 }
 
 .hero-title {
@@ -44,7 +44,7 @@
 }
 
 .highlight-gold {
-  color: var(--accent-gold);
+  color: var(--primary-color); /* Swap gold title highlight to red passion! */
   font-family: var(--font-cursive);
   text-transform: none;
   font-size: 5.2rem;
@@ -54,7 +54,7 @@
 }
 
 .text-glow {
-  text-shadow: 0 0 25px rgba(212, 175, 55, 0.6), 0 0 50px rgba(217, 27, 92, 0.3);
+  text-shadow: 0 0 20px rgba(255, 0, 60, 0.3), 0 0 40px rgba(198, 155, 34, 0.2);
 }
 
 .hero-typed-container {
@@ -68,6 +68,7 @@
   font-style: italic;
   color: var(--text-muted);
   letter-spacing: 1.5px;
+  font-weight: 500;
 }
 
 .typed-cursor {
@@ -82,7 +83,7 @@
   filter: blur(100px);
   z-index: -1;
   pointer-events: none;
-  opacity: 0.45;
+  opacity: 0.35;
   animation: drift 10s infinite alternate ease-in-out;
 }
 
@@ -98,7 +99,7 @@
 .orb-2 {
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, var(--secondary-color) 0%, transparent 70%);
+  background: radial-gradient(circle, var(--accent-gold) 0%, transparent 70%);
   bottom: 10%;
   right: -10%;
   animation-delay: 2s;
@@ -165,7 +166,7 @@
   top: 25px;
   left: 30px;
   font-size: 2.5rem;
-  color: rgba(217, 27, 92, 0.15);
+  color: rgba(255, 0, 60, 0.15);
 }
 
 .quote-icon-bottom {
@@ -173,7 +174,7 @@
   bottom: 25px;
   right: 30px;
   font-size: 2.5rem;
-  color: rgba(217, 27, 92, 0.15);
+  color: rgba(255, 0, 60, 0.15);
 }
 
 .romantic-lead {
@@ -190,8 +191,8 @@
 .quote-author {
   font-family: var(--font-cursive);
   font-size: 2.2rem;
-  color: var(--accent-gold);
-  text-shadow: 0 0 8px var(--accent-gold-glow);
+  color: var(--primary-color);
+  text-shadow: 0 0 8px rgba(255,0,60,0.15);
   margin-top: 15px;
 }
 
@@ -207,7 +208,7 @@
 .chapter-icon-box {
   width: 70px;
   height: 70px;
-  background: rgba(217, 27, 92, 0.1);
+  background: rgba(255, 0, 60, 0.08);
   border: 1px solid var(--border-glass);
   border-radius: 50%;
   display: flex;
@@ -216,13 +217,13 @@
   color: var(--primary-color);
   font-size: 1.8rem;
   margin-bottom: 25px;
-  box-shadow: inset 0 0 10px rgba(217, 27, 92, 0.1);
+  box-shadow: inset 0 0 10px rgba(255, 0, 60, 0.05);
   transition: var(--transition-smooth);
 }
 
 .chapter-icon-box.gold-icon {
-  background: rgba(212, 175, 55, 0.1);
-  border-color: rgba(212, 175, 55, 0.2);
+  background: rgba(198, 155, 34, 0.08);
+  border-color: rgba(198, 155, 34, 0.2);
   color: var(--accent-gold);
 }
 
@@ -235,14 +236,14 @@
 
 .chapter-card:hover .chapter-icon-box.gold-icon {
   background: var(--accent-gold);
-  color: var(--bg-dark-base);
+  color: #fff;
   box-shadow: 0 0 20px var(--accent-gold-glow);
 }
 
 .chapter-card h3 {
   font-size: 1.4rem;
   margin-bottom: 15px;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.5px;
 }
 
@@ -254,13 +255,13 @@
 }
 
 .highlight-border {
-  border-color: rgba(212, 175, 55, 0.35);
-  box-shadow: 0 8px 32px 0 rgba(212, 175, 55, 0.1);
+  border-color: rgba(255, 0, 60, 0.35);
+  box-shadow: 0 10px 32px 0 rgba(255, 0, 60, 0.08);
 }
 
 .highlight-border:hover {
-  border-color: var(--accent-gold);
-  box-shadow: 0 12px 40px 0 rgba(212, 175, 55, 0.25);
+  border-color: var(--primary-color);
+  box-shadow: 0 15px 40px 0 rgba(255, 0, 60, 0.18);
 }
 
 /* 6. Romantic Swiper quote slider */
@@ -287,27 +288,27 @@
 .slider-card h5 {
   font-family: var(--font-cursive);
   font-size: 2rem;
-  color: var(--accent-gold);
+  color: var(--primary-color);
   margin-top: 10px;
 }
 
 /* Swiper styling customization */
 .swiper-button-next,
 .swiper-button-prev {
-  color: var(--accent-gold) !important;
+  color: var(--primary-color) !important;
   transition: var(--transition-fast);
 }
 
 .swiper-button-next::after,
 .swiper-button-prev::after {
   font-size: 1.6rem !important;
-  text-shadow: 0 0 5px rgba(212, 175, 55, 0.5);
+  text-shadow: 0 0 5px rgba(255, 0, 60, 0.3);
 }
 
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
   transform: scale(1.15);
-  color: var(--primary-color) !important;
+  color: var(--accent-gold) !important;
 }
 
 .swiper-pagination-bullet {
@@ -317,9 +318,9 @@
 }
 
 .swiper-pagination-bullet-active {
-  background: var(--accent-gold) !important;
+  background: var(--primary-color) !important;
   width: 20px !important;
   border-radius: 5px !important;
   opacity: 1 !important;
-  box-shadow: 0 0 8px var(--accent-gold-glow);
+  box-shadow: 0 0 8px var(--primary-glow);
 }

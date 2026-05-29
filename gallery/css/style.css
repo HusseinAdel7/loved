@@ -9,12 +9,13 @@
 .gallery-hero {
   padding: 150px 20px 60px 20px;
   position: relative;
+  background: radial-gradient(circle at center, rgba(255, 0, 60, 0.08) 0%, rgba(255, 242, 245, 0.7) 100%);
 }
 
 .gallery-main-title {
   font-size: 4rem;
   color: var(--text-primary);
-  text-shadow: 0 0 15px var(--primary-glow);
+  text-shadow: 0 0 10px rgba(255, 0, 60, 0.15);
   margin-bottom: 20px;
 }
 
@@ -49,15 +50,15 @@
   font-family: var(--font-luxury);
   font-size: 0.9rem;
   letter-spacing: 1.5px;
-  font-weight: 500;
+  font-weight: 600;
   text-transform: uppercase;
   cursor: pointer;
   transition: var(--transition-fast);
 }
 
 .btn-filter:hover {
-  color: var(--accent-gold);
-  text-shadow: 0 0 5px var(--accent-gold-glow);
+  color: var(--primary-color);
+  text-shadow: 0 0 5px rgba(255,0,60,0.15);
 }
 
 .btn-filter.active {
@@ -71,7 +72,6 @@
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-/* Hidden items via JavaScript filtering */
 .gallery-item.hidden {
   display: none !important;
   opacity: 0;
@@ -79,17 +79,17 @@
 }
 
 .polaroid-card {
-  background: #fbf9f6; /* Premium soft paper white */
+  background: #ffffff; /* Crisp white vintage card */
   padding: 18px 18px 28px 18px;
   border-radius: 4px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 15px 35px rgba(255, 0, 60, 0.08), 0 5px 15px rgba(0, 0, 0, 0.03); /* Soft pinkish shadows */
   transition: transform 0.5s cubic-bezier(0.2, 1, 0.3, 1), box-shadow 0.5s ease;
   cursor: pointer;
   display: flex;
   flex-direction: column;
 }
 
-/* Alternating subtle rotations for vintage/romantic feel */
+/* Alternating subtle rotations */
 .gallery-item:nth-child(odd) .polaroid-card {
   transform: rotate(-1.5deg);
 }
@@ -100,16 +100,16 @@
 
 .polaroid-card:hover {
   transform: scale(1.06) rotate(0deg) translateY(-8px) !important;
-  box-shadow: 0 20px 45px rgba(217, 27, 92, 0.3);
+  box-shadow: 0 25px 50px rgba(255, 0, 60, 0.22);
   z-index: 10;
 }
 
 .polaroid-photo-wrapper {
   width: 100%;
-  aspect-ratio: 1 / 1; /* Force perfect square aspect ratio */
+  aspect-ratio: 1 / 1;
   overflow: hidden;
   border-radius: 2px;
-  border: 1px solid rgba(0,0,0,0.06);
+  border: 1px solid rgba(255,0,60,0.06);
   position: relative;
 }
 
@@ -132,7 +132,7 @@
 .absolute-icon {
   font-size: 3.5rem;
   color: white;
-  text-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  text-shadow: 0 4px 15px rgba(0,0,0,0.2);
   z-index: 2;
   transition: var(--transition-smooth);
 }
@@ -176,7 +176,7 @@
 
 .polaroid-caption h4 {
   font-family: var(--font-luxury);
-  color: #2b0c30;
+  color: #3d0014;
   font-size: 1.15rem;
   margin-bottom: 5px;
   font-weight: 600;
@@ -189,14 +189,14 @@
   margin-bottom: 0;
 }
 
-/* 4. Fullscreen Glassmorphic Lightbox Overlay */
+/* 4. Fullscreen Bright Pearlescent Lightbox Overlay */
 .lightbox-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(5, 1, 8, 0.96);
+  background: rgba(255, 245, 247, 0.98); /* Bright Pearlescent backdrop */
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
   display: flex;
@@ -238,14 +238,14 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 15px 40px rgba(255, 0, 60, 0.15);
   overflow: hidden;
 }
 
 #lightbox-art-icon {
   font-size: 7rem;
   color: white;
-  text-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  text-shadow: 0 4px 20px rgba(0,0,0,0.2);
   z-index: 2;
   animation: heart-beat 2.5s infinite ease-in-out;
 }
@@ -258,8 +258,8 @@
 
 #lightbox-title {
   font-size: 2.2rem;
-  color: var(--accent-gold);
-  text-shadow: 0 0 10px var(--accent-gold-glow);
+  color: var(--primary-color);
+  text-shadow: 0 0 10px rgba(255, 0, 60, 0.1);
   margin-bottom: 5px;
 }
 
@@ -289,12 +289,12 @@
   position: absolute;
   top: 35px;
   right: 35px;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 0, 60, 0.05);
   border: 1px solid var(--border-glass);
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  color: var(--accent-gold);
+  color: var(--primary-color);
   font-size: 1.4rem;
   display: flex;
   justify-content: center;
@@ -315,12 +315,12 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(255, 0, 60, 0.03);
   border: 1px solid var(--border-glass);
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  color: var(--text-muted);
+  color: var(--primary-color);
   font-size: 1.8rem;
   display: flex;
   justify-content: center;
@@ -331,9 +331,9 @@
 }
 
 .lightbox-arrow:hover {
-  background: rgba(217,27,92,0.15);
+  background: rgba(255, 0, 60, 0.08);
   color: var(--accent-gold);
-  border-color: rgba(212,175,55,0.4);
+  border-color: rgba(198, 155, 34, 0.4);
 }
 
 .arrow-left { left: 40px; }

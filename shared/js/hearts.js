@@ -13,12 +13,12 @@ class FloatingHearts {
     
     this.ctx = this.canvas.getContext("2d");
     this.particles = [];
-    this.particleCount = 25; // Balanced for high performance
+    this.particleCount = 25; // High performance rendering limit
     this.colors = [
-      "rgba(217, 27, 92, 0.4)",  /* Romantic Pink-Red */
-      "rgba(112, 27, 168, 0.35)", /* Velvet Amethyst */
-      "rgba(255, 105, 180, 0.4)", /* Soft Rose */
-      "rgba(253, 248, 242, 0.25)" /* Pearl White Glow */
+      "rgba(255, 0, 60, 0.45)",   /* Vibrant Scarlet Red */
+      "rgba(255, 77, 109, 0.4)",   /* Glowing Soft Pink */
+      "rgba(198, 155, 34, 0.35)",  /* Luxury Gold Dust */
+      "rgba(255, 182, 193, 0.4)"   /* Light Pearl Rose */
     ];
 
     this.resize();
@@ -43,8 +43,8 @@ class FloatingHearts {
     return {
       x: Math.random() * this.width,
       y: randomY ? Math.random() * this.height : this.height + 50,
-      size: Math.random() * 15 + 8, // size in pixels
-      speedY: Math.random() * 0.8 + 0.3, // slow float up
+      size: Math.random() * 15 + 8,
+      speedY: Math.random() * 0.8 + 0.3,
       wobbleSpeed: Math.random() * 0.02 + 0.005,
       wobbleRange: Math.random() * 15 + 5,
       wobbleAngle: Math.random() * Math.PI * 2,
@@ -62,18 +62,15 @@ class FloatingHearts {
     ctx.shadowColor = color;
     ctx.beginPath();
     
-    // Smooth custom math curve for classical heart path
     const topCurveHeight = size * 0.3;
     ctx.moveTo(x, y + topCurveHeight);
     
-    // Top-left curve
     ctx.bezierCurveTo(
       x - size / 2, y - size / 2, 
       x - size, y + size / 3, 
       x, y + size
     );
     
-    // Top-right curve
     ctx.bezierCurveTo(
       x + size, y + size / 3, 
       x + size / 2, y - size / 2, 
@@ -91,15 +88,12 @@ class FloatingHearts {
     for (let i = 0; i < this.particles.length; i++) {
       const p = this.particles[i];
       
-      // Update position
       p.y -= p.speedY;
       p.wobbleAngle += p.wobbleSpeed;
       const currentX = p.x + Math.sin(p.wobbleAngle) * p.wobbleRange;
       
-      // Draw the floating particle
       this.drawHeart(this.ctx, currentX, p.y, p.size, p.color, p.opacity);
 
-      // Handle off-screen particles (reset bottom)
       if (p.y < -50) {
         this.particles[i] = this.createParticle(false);
       }
@@ -109,7 +103,6 @@ class FloatingHearts {
   }
 }
 
-// Automatically mount engine to window or start on document ready
 window.addEventListener("DOMContentLoaded", () => {
   window.floatingHeartsEngine = new FloatingHearts();
 });
