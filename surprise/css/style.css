@@ -1,0 +1,308 @@
+/*
+  =========================================
+  Luxury Romantic Birthday Website
+  Final Surprise Specific CSS
+  =========================================
+*/
+
+/* Fullscreen Fireworks & Confetti Canvas Overlay */
+#fireworks-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999; /* Under navbar, but above background details */
+  pointer-events: none;
+}
+
+/* 1. Surprise Hero Header */
+.surprise-hero {
+  padding: 150px 20px 40px 20px;
+  position: relative;
+  transition: opacity 1s ease;
+}
+
+.surprise-hero.fade-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.surprise-main-title {
+  font-size: 4rem;
+  color: var(--text-primary);
+  text-shadow: 0 0 15px var(--primary-glow);
+  margin-bottom: 20px;
+}
+
+.surprise-lead-subtitle {
+  font-family: var(--font-luxury);
+  font-style: italic;
+  font-size: 1.25rem;
+  color: var(--text-muted);
+  letter-spacing: 2px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* 2. Interactive Velvet Luxury Envelope */
+.envelope-unveiling-section {
+  padding: 50px 0 100px 0;
+  position: relative;
+}
+
+.luxury-envelope-container {
+  position: relative;
+  width: 480px;
+  height: 320px;
+  cursor: pointer;
+  perspective: 1200px;
+  transform-style: preserve-3d;
+  animation: float-slow 4s infinite ease-in-out;
+  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+  z-index: 10;
+}
+
+.luxury-envelope-container:hover {
+  transform: translateY(-10px) rotateX(8deg);
+}
+
+.luxury-envelope-container.open {
+  animation: none; /* stop float during letter read */
+}
+
+/* Outer envelope shells */
+.outer-envelope {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #3e031b; /* Velvet Burgundy */
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.7);
+  border-radius: 8px;
+  transform-style: preserve-3d;
+}
+
+.outer-envelope::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 160px 240px 160px 0;
+  border-color: transparent transparent transparent #520525;
+  z-index: 2;
+}
+
+.outer-envelope::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 160px 0 160px 240px;
+  border-color: transparent #520525 transparent transparent;
+  z-index: 2;
+}
+
+.outer-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 240px 170px 240px;
+  border-color: transparent transparent #2a0112 transparent;
+  z-index: 3;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.outer-flap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 170px 240px 0 240px;
+  border-color: #64082e transparent transparent transparent;
+  z-index: 4;
+  transform-origin: top;
+  transition: transform 0.7s cubic-bezier(0.25, 1, 0.5, 1), z-index 0.3s;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+/* Gold wax seal trigger button */
+.wax-seal-btn {
+  position: absolute;
+  top: 160px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70px;
+  height: 70px;
+  background: radial-gradient(circle, #f3d078 0%, #b89324 100%);
+  border-radius: 50%;
+  z-index: 6;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.6), inset 0 2px 5px rgba(255,255,255,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #634500;
+  font-size: 1.85rem;
+  border: 2px solid #7c5c00;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  animation: heartbeat 1.5s infinite ease-in-out;
+}
+
+.wax-seal-btn:hover {
+  box-shadow: 0 0 25px var(--accent-gold);
+  color: #3b2800;
+  transform: translate(-50%, -50%) scale(1.05);
+}
+
+/* Inner scroll sheet letter styling */
+.letter-sheet {
+  position: absolute;
+  bottom: 10px;
+  left: 5%;
+  width: 90%;
+  height: 270px;
+  background: #fbf6ec; /* parchment white */
+  border-radius: 4px;
+  z-index: 1;
+  padding: 30px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1), 
+              width 0.8s ease, 
+              height 0.8s ease, 
+              left 0.8s ease,
+              bottom 0.8s ease,
+              border-radius 0.8s ease;
+  overflow: hidden;
+}
+
+.sheet-scroller-box {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
+/* Custom scroll bar inside letter scroll */
+.sheet-scroller-box::-webkit-scrollbar {
+  width: 5px;
+}
+.sheet-scroller-box::-webkit-scrollbar-thumb {
+  background: rgba(212, 175, 55, 0.3);
+  border-radius: 4px;
+}
+
+.letter-sheet h2 {
+  font-family: var(--font-cursive);
+  font-size: 2.8rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.letter-sheet p {
+  font-family: var(--font-luxury);
+  font-size: 1.15rem;
+  color: #3e263d;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.letter-sign-off {
+  text-align: right;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.letter-sign-off p {
+  margin-bottom: 5px;
+  font-size: 1.8rem;
+}
+
+/* Interactive Open state shifts */
+.luxury-envelope-container.open .outer-flap {
+  transform: rotateX(180deg);
+  z-index: 0;
+}
+
+.luxury-envelope-container.open .wax-seal-btn {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0);
+  pointer-events: none;
+}
+
+/* Open letter morphs into full-screen translucent reading scroll */
+.luxury-envelope-container.open .letter-sheet {
+  position: fixed;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 650px;
+  height: 80vh;
+  z-index: 1000;
+  border-radius: 20px;
+  border: 2px solid var(--accent-gold);
+  box-shadow: 0 30px 70px rgba(0,0,0,0.8);
+  padding: 50px 40px;
+}
+
+/* 3. Fullscreen Neon Glowing Typography */
+.fullscreen-neon-declaration {
+  position: fixed;
+  bottom: 6vh;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 998; /* behind scroll sheet, but in front of fireworks */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1.8s cubic-bezier(0.25, 1, 0.5, 1), visibility 1.8s;
+  width: 100%;
+}
+
+.fullscreen-neon-declaration.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.neon-glow-magenta {
+  font-family: var(--font-luxury);
+  font-size: 3.8rem;
+  color: #fff;
+  text-shadow: 0 0 10px #ff0055, 0 0 20px #ff0055, 0 0 45px #ff0055;
+  letter-spacing: 5px;
+  font-weight: 700;
+}
+
+.neon-glow-gold {
+  font-size: 3.5rem;
+  color: #fff;
+  text-shadow: 0 0 10px #d4af37, 0 0 20px #d4af37, 0 0 45px #d4af37;
+  margin-top: 10px;
+}
+
+/* 4. Smooth hiding for CTA and shared footer during scroll reading */
+#surprise-footer-cta,
+#surprise-shared-footer {
+  transition: opacity 0.8s ease;
+}
+
+#surprise-footer-cta.fade-hidden,
+#surprise-shared-footer.fade-hidden {
+  opacity: 0;
+  pointer-events: none;
+}

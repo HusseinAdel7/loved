@@ -1,0 +1,114 @@
+/*
+  =========================================
+  Luxury Romantic Birthday Website
+  Final Surprise Responsive CSS
+  =========================================
+*/
+
+@media (max-width: 991px) {
+  .surprise-main-title {
+    font-size: 3.2rem;
+  }
+
+  .surprise-lead-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .neon-glow-magenta {
+    font-size: 3rem;
+  }
+
+  .neon-glow-gold {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .surprise-hero {
+    padding: 120px 15px 20px 15px;
+  }
+
+  .surprise-main-title {
+    font-size: 2.5rem;
+  }
+
+  /* Scale down Envelope dimensions for small mobile viewports */
+  .luxury-envelope-container {
+    width: 320px;
+    height: 220px;
+  }
+
+  .outer-envelope::before {
+    border-width: 110px 160px 110px 0;
+  }
+
+  .outer-envelope::after {
+    border-width: 110px 0 110px 160px;
+  }
+
+  .outer-bottom {
+    border-width: 0 160px 120px 160px;
+  }
+
+  .outer-flap {
+    border-width: 120px 160px 0 160px;
+  }
+
+  .wax-seal-btn {
+    top: 110px;
+    width: 50px;
+    height: 50px;
+    font-size: 1.3rem;
+  }
+
+  .letter-sheet {
+    height: 180px;
+  }
+
+  /* Adjust full-screen scrolling modal bounds */
+  .luxury-envelope-container.open .letter-sheet {
+    width: 95%;
+    height: 75vh;
+    padding: 30px 20px;
+    top: 50%;
+  }
+
+  .letter-sheet h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+
+  .letter-sheet p {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 15px;
+  }
+
+  /* Shrink glowing neon letters on mobile screens */
+  .fullscreen-neon-declaration {
+    bottom: 12vh;
+  }
+
+  .neon-glow-magenta {
+    font-size: 2.1rem;
+    letter-spacing: 2px;
+  }
+
+  .neon-glow-gold {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .surprise-main-title {
+    font-size: 2rem;
+  }
+
+  .neon-glow-magenta {
+    font-size: 1.65rem;
+  }
+
+  .neon-glow-gold {
+    font-size: 1.6rem;
+  }
+}

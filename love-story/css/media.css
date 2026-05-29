@@ -1,0 +1,104 @@
+/*
+  =========================================
+  Luxury Romantic Birthday Website
+  Love Story Timeline Responsive Stylesheet
+  =========================================
+*/
+
+@media (max-width: 991px) {
+  .timeline-main-title {
+    font-size: 3.2rem;
+  }
+
+  .timeline-lead-subtitle {
+    font-size: 1.1rem;
+    padding: 0 15px;
+  }
+
+  .timeline-card {
+    width: 45%;
+    padding: 30px 25px;
+  }
+
+  .timeline-card h3 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Move central glowing timeline track to the left */
+  .timeline-glowing-line {
+    left: 25px;
+    transform: none;
+  }
+
+  /* Force all cards to take full width and stack to the right of the line */
+  .timeline-item {
+    justify-content: flex-end !important;
+    padding-left: 55px;
+    margin-bottom: 70px;
+  }
+
+  .timeline-card {
+    width: 100%;
+    padding: 30px 20px;
+  }
+
+  /* Move pulsing dots to the left glowing line */
+  .timeline-dot-pulse {
+    left: 25px !important;
+    transform: translateX(-50%) !important;
+  }
+
+  /* Move date badges to sit neatly on top of card content */
+  .timeline-date-badge {
+    position: relative;
+    left: 0 !important;
+    top: 0 !important;
+    transform: none !important;
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 6px 15px;
+    font-size: 0.8rem;
+  }
+
+  /* Move card icons to sit opposite the date badge */
+  .card-icon {
+    top: -20px !important;
+    right: 20px !important;
+    left: auto !important;
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+
+  .timeline-hero {
+    padding: 120px 15px 50px 15px;
+  }
+
+  .timeline-main-title {
+    font-size: 2.5rem;
+  }
+
+  .gold-text {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline-main-title {
+    font-size: 2rem;
+  }
+
+  .timeline-item {
+    padding-left: 45px;
+  }
+
+  .timeline-glowing-line {
+    left: 15px;
+  }
+
+  .timeline-dot-pulse {
+    left: 15px !important;
+  }
+}

@@ -1,0 +1,128 @@
+/*
+  =========================================
+  Luxury Romantic Birthday Website
+  Memories Gallery Responsive Stylesheet
+  =========================================
+*/
+
+@media (max-width: 991px) {
+  .gallery-main-title {
+    font-size: 3.2rem;
+  }
+
+  .gallery-lead-subtitle {
+    font-size: 1.1rem;
+  }
+
+  /* Lightbox wrapping stack */
+  .lightbox-content-box {
+    flex-direction: column;
+    gap: 20px;
+    width: 85%;
+    max-width: 500px;
+  }
+
+  .lightbox-visual-display {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+  }
+
+  .lightbox-details-panel {
+    width: 100%;
+    padding: 25px !important;
+  }
+
+  #lightbox-title {
+    font-size: 1.8rem;
+  }
+
+  .lightbox-quote {
+    font-size: 1.45rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-hero {
+    padding: 120px 15px 40px 15px;
+  }
+
+  .gallery-main-title {
+    font-size: 2.5rem;
+  }
+
+  /* Horizontal scrolling filter tabs for thumb sweeps */
+  .filter-group-container {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 8px 15px !important;
+    max-width: 95%;
+    margin: 0 auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .filter-group-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar on mobile */
+  }
+
+  .btn-filter {
+    padding: 6px 15px;
+    font-size: 0.8rem;
+  }
+
+  .polaroid-card {
+    padding: 12px 12px 20px 12px;
+  }
+
+  .polaroid-caption h4 {
+    font-size: 1.05rem;
+  }
+
+  .polaroid-caption p {
+    font-size: 1.2rem;
+  }
+
+  /* Mobile Lightbox arrow adaptations */
+  .lightbox-arrow {
+    width: 45px;
+    height: 45px;
+    font-size: 1.3rem;
+  }
+
+  .arrow-left { left: 10px; }
+  .arrow-right { right: 10px; }
+
+  .lightbox-close {
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-main-title {
+    font-size: 2rem;
+  }
+
+  .lightbox-content-box {
+    width: 90%;
+  }
+
+  #lightbox-art-icon {
+    font-size: 5rem;
+  }
+
+  .lightbox-details-panel {
+    padding: 20px !important;
+  }
+
+  #lightbox-title {
+    font-size: 1.45rem;
+  }
+
+  .lightbox-quote {
+    font-size: 1.25rem;
+  }
+}

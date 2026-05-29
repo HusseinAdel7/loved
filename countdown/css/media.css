@@ -1,0 +1,76 @@
+/*
+  =========================================
+  Luxury Romantic Birthday Website
+  Birthday Countdown Responsive CSS
+  =========================================
+*/
+
+@media (max-width: 991px) {
+  .countdown-main-title {
+    font-size: 3.2rem;
+  }
+
+  .countdown-lead-subtitle {
+    font-size: 1.1rem;
+    padding: 0 15px;
+  }
+
+  .clock-number {
+    font-size: 3rem;
+  }
+
+  #countdown-dynamic-note {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .countdown-hero {
+    padding: 120px 15px 30px 15px;
+  }
+
+  .countdown-main-title {
+    font-size: 2.5rem;
+  }
+
+  .clock-card {
+    padding: 20px 10px;
+    border-radius: 15px;
+  }
+
+  .clock-number {
+    font-size: 2.3rem;
+  }
+
+  .clock-label {
+    font-size: 0.65rem;
+    letter-spacing: 1.5px;
+  }
+
+  #countdown-dynamic-note {
+    font-size: 1.45rem;
+    line-height: 1.6;
+  }
+
+  .banner-card {
+    padding: 20px 25px !important;
+  }
+
+  .wish-form-card {
+    padding: 40px 20px !important;
+  }
+
+  .wish-form-card h3 {
+    font-size: 1.35rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .countdown-main-title {
+    font-size: 2rem;
+  }
+
+  .clock-number {
+    font-size: 1.95rem;
+  }
+}

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reasons I Love You | My Heart To Yours</title>
+  
+  <!-- Bootstrap 5 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- FontAwesome 6 Icons CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- AOS.js Scroll Reveal CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <!-- Shared Style Sheets -->
+  <link rel="stylesheet" href="../shared/css/global.css">
+  <link rel="stylesheet" href="../shared/css/navigation.css">
+  
+  <!-- Reasons Page Specific Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media.css">
+</head>
+<body class="bg-gradient-romantic">
+
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-progress"></div>
+
+  <!-- Smooth Page Loader -->
+  <div class="page-loader">
+    <div class="loader-heart">❤</div>
+    <div class="loader-text">Counting My Blessings...</div>
+  </div>
+
+  <!-- Shared Custom Navbar Component -->
+  <nav class="custom-navbar">
+    <a href="../index/index.html" class="nav-logo">
+      ❤ <span>With Love</span>
+    </a>
+    
+    <button class="nav-toggle" aria-label="Toggle Navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    
+    <ul class="nav-menu">
+      <li class="nav-item"><a href="../index/index.html" data-translate="nav_home"><i class="fa-solid fa-house"></i> Home</a></li>
+      <li class="nav-item"><a href="../love-story/love-story.html" data-translate="nav_story"><i class="fa-solid fa-book-open"></i> Our Story</a></li>
+      <li class="nav-item"><a href="../gallery/gallery.html" data-translate="nav_gallery"><i class="fa-solid fa-images"></i> Memories</a></li>
+      <li class="nav-item"><a href="../countdown/countdown.html" data-translate="nav_countdown"><i class="fa-solid fa-clock"></i> Countdown</a></li>
+      <li class="nav-item active"><a href="../reasons/reasons.html" data-translate="nav_reasons"><i class="fa-solid fa-heart-pulse"></i> Why I Love You</a></li>
+      <li class="nav-item"><a href="../surprise/surprise.html" data-translate="nav_surprise"><i class="fa-solid fa-gift"></i> The Surprise</a></li>
+    </ul>
+
+    <!-- Bilingual Actions Panel -->
+    <div class="nav-actions">
+      <div class="nav-key-tracker">🔑 Keys: <span>0/3</span></div>
+      <button class="btn-lang-toggle"><i class="fa-solid fa-globe"></i> EN/AR</button>
+    </div>
+  </nav>
+
+  <!-- 1. Cinematic Reasons Header -->
+  <header class="reasons-hero">
+    <div class="container text-center position-relative">
+      <h1 class="reasons-main-title" data-aos="fade-down" data-aos-duration="1200" data-translate="reasons_hero_title">Why You Are My Universe</h1>
+      <p class="reasons-lead-subtitle" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200" data-translate="reasons_hero_sub">
+        A small collection of eternal truths, whispered from my heart directly into yours
+      </p>
+      
+      <!-- Interactive Central Pulsing Heart Centerpiece -->
+      <div class="heart-centerpiece-container mt-4" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400">
+        <div class="glowing-heart-pulse" id="central-pulsing-heart">
+          <svg class="heart-svg" viewBox="0 0 32 29.6">
+            <path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2
+            c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 2. Interactive 3D Flip Card Grid -->
+  <section class="flip-cards-section page-section">
+    <div class="container">
+      <div class="row g-4 justify-content-center">
+        
+        <!-- Card 1 -->
+        <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-duration="800">
+          <div class="flip-card-container">
+            <div class="flip-card-inner">
+              <!-- Front Side -->
+              <div class="flip-card-front glass-card">
+                <span class="reason-badge"><span data-translate="reasons_badge">Reason</span> 01</span>
+                <i class="fa-solid fa-sparkles front-heart-icon"></i>
+                <h3 data-translate="reasons_card1_title">Your Gentle Heart</h3>
+                <span class="click-reveal-prompt" data-translate="reasons_click_reveal"><i class="fa-solid fa-hand-pointer"></i> Click to reveal</span>
+              </div>
+              <!-- Back Side -->
+              <div class="flip-card-back glass-card">
+                <h3 data-translate="reasons_card1_title">Your Gentle Heart</h3>
+                <div class="back-divider"></div>
+                <p class="reason-text-block" data-translate="reasons_card1_p">"How you care for everyone around you with a soft kindness that makes the world a warmer place. Your boundless compassion is my daily inspiration, teaching me how to love deeper."</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="100">
+          <div class="flip-card-container">
+            <div class="flip-card-inner">
+              <!-- Front Side -->
+              <div class="flip-card-front glass-card">
+                <span class="reason-badge"><span data-translate="reasons_badge">Reason</span> 02</span>
+                <i class="fa-solid fa-music front-heart-icon"></i>
+                <h3 data-translate="reasons_card2_title">The Way You Laugh</h3>
+                <span class="click-reveal-prompt" data-translate="reasons_click_reveal"><i class="fa-solid fa-hand-pointer"></i> Click to reveal</span>
+              </div>
+              <!-- Back Side -->
+              <div class="flip-card-back glass-card">
+                <h3 data-translate="reasons_card2_title">The Way You Laugh</h3>
+                <div class="back-divider"></div>
+                <p class="reason-text-block" data-translate="reasons_card2_p">"It is the exact melody that dissolves my darkest clouds in an instant. Your chuckle is my absolute favorite sound, a sweet chorus that fills our home with cozy, pure happiness."</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
+          <div class="flip-card-container">
+            <div class="flip-card-inner">
+              <!-- Front Side -->
+              <div class="flip-card-front glass-card">
+                <span class="reason-badge"><span data-translate="reasons_badge">Reason</span> 03</span>
+                <i class="fa-solid fa-shield-halved front-heart-icon"></i>
+                <h3 data-translate="reasons_card3_title">Your Quiet Strength</h3>
+                <span class="click-reveal-prompt" data-translate="reasons_click_reveal"><i class="fa-solid fa-hand-pointer"></i> Click to reveal</span>
+              </div>
+              <!-- Back Side -->
+              <div class="flip-card-back glass-card">
+                <h3 data-translate="reasons_card3_title">Your Quiet Strength</h3>
+                <div class="back-divider"></div>
+                <p class="reason-text-block" data-translate="reasons_card3_p">"How you face challenges with a silent grace, absolute wisdom, and an unwavering courage. You inspire me to stand taller. In all storms, you are my ultimate anchor."</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="300">
+          <div class="flip-card-container">
+            <div class="flip-card-inner">
+              <!-- Front Side -->
+              <div class="flip-card-front glass-card">
+                <span class="reason-badge"><span data-translate="reasons_badge">Reason</span> 04</span>
+                <i class="fa-solid fa-comments front-heart-icon"></i>
+                <h3 data-translate="reasons_card4_title">Our Inside Jokes</h3>
+                <span class="click-reveal-prompt" data-translate="reasons_click_reveal"><i class="fa-solid fa-hand-pointer"></i> Click to reveal</span>
+              </div>
+              <!-- Back Side -->
+              <div class="flip-card-back glass-card">
+                <h3 data-translate="reasons_card4_title">Our Inside Jokes</h3>
+                <div class="back-divider"></div>
+                <p class="reason-text-block" data-translate="reasons_card4_p">"The thousands of tiny smiles that only we share. How we can speak full volumes with a simple look and laugh like children. We are two puzzle pieces made from the same stars."</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="400">
+          <div class="flip-card-container">
+            <div class="flip-card-inner">
+              <!-- Front Side -->
+              <div class="flip-card-front glass-card">
+                <span class="reason-badge"><span data-translate="reasons_badge">Reason</span> 05</span>
+                <i class="fa-solid fa-handshake-angle front-heart-icon"></i>
+                <h3 data-translate="reasons_card5_title">Your Faith In Us</h3>
+                <span class="click-reveal-prompt" data-translate="reasons_click_reveal"><i class="fa-solid fa-hand-pointer"></i> Click to reveal</span>
+              </div>
+              <!-- Back Side -->
+              <div class="flip-card-back glass-card">
+                <h3 data-translate="reasons_card5_title">Your Faith In Us</h3>
+                <div class="back-divider"></div>
+                <p class="reason-text-block" data-translate="reasons_card5_p">"How you hold my hand, believe in my dreams, and love me so unconditionally. With you standing by my side, I feel capable of conquering any mountain, in this life and the next."</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="500">
+          <div class="flip-card-container">
+            <div class="flip-card-inner">
+              <!-- Front Side -->
+              <div class="flip-card-front glass-card">
+                <span class="reason-badge"><span data-translate="reasons_badge">Reason</span> 06</span>
+                <i class="fa-solid fa-feather-pointed front-heart-icon"></i>
+                <h3 data-translate="reasons_card6_title">You Make Me Better</h3>
+                <span class="click-reveal-prompt" data-translate="reasons_click_reveal"><i class="fa-solid fa-hand-pointer"></i> Click to reveal</span>
+              </div>
+              <!-- Back Side -->
+              <div class="flip-card-back glass-card text-magenta-border" style="position: relative;">
+                <h3 data-translate="reasons_card6_title">You Make Me Better</h3>
+                <div class="back-divider"></div>
+                <p class="reason-text-block" data-translate="reasons_card6_p">"Simply being next to you motivates me to grow, think deeper, and live more fully. You are the absolute best thing that has ever, and will ever, happen to me. My infinite gift."</p>
+                
+                <!-- Hidden Quest Key 3 (Reasons Key) -->
+                <div class="glowing-quest-key" data-key-name="reasons" style="position: absolute; bottom: 15px; right: 15px; width: 45px; height: 45px; font-size: 1.2rem;" title="Find Me! 🔑">
+                  <i class="fa-solid fa-key"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Navigation Call to Action -->
+  <section class="reasons-cta page-section text-center">
+    <div class="container" data-aos="fade-up" data-aos-duration="1000">
+      <div class="glass-card cta-box max-600">
+        <h2 class="font-cursive gold-text" data-translate="reasons_cta_title">A cinematic surprise awaits...</h2>
+        <p class="mb-4 text-muted" data-translate="reasons_cta_p">You have unlocked the final gateway. Unveil your grand birthday surprise.</p>
+        <a href="../surprise/surprise.html" class="btn-gold-glow btn-pulse" data-translate="reasons_cta_btn">
+          Open Final Surprise <i class="fa-solid fa-gift"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shared Romantic Footer Component -->
+  <footer class="romantic-footer">
+    <p class="footer-quote font-cursive" data-translate="footer_quote_reasons">"I love you for a thousand reasons, and a million more."</p>
+    <div class="footer-divider"></div>
+    <div class="footer-nav">
+      <a href="../index/index.html" class="footer-nav-link" data-translate="nav_home">Home</a>
+      <a href="../love-story/love-story.html" class="footer-nav-link" data-translate="nav_story">Our Story</a>
+      <a href="../gallery/gallery.html" class="footer-nav-link" data-translate="nav_gallery">Memories</a>
+      <a href="../countdown/countdown.html" class="footer-nav-link" data-translate="nav_countdown">Countdown</a>
+      <a href="../reasons/reasons.html" class="footer-nav-link" data-translate="nav_reasons">Why I Love You</a>
+      <a href="../surprise/surprise.html" class="footer-nav-link" data-translate="nav_surprise">The Surprise</a>
+    </div>
+    <p class="footer-details" data-translate="footer_details">Made with infinite love <span>❤</span> for you</p>
+    <p class="footer-credits" data-translate="footer_credits">&copy; 2026. All rights reserved. My Hearts Belongs To You.</p>
+  </footer>
+
+  <!-- Audio Floating Controller -->
+  <div class="audio-controller">
+    <button class="audio-btn" aria-label="Toggle Audio"><i class="fa-solid fa-play"></i></button>
+    <div class="audio-visualizer">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <div class="back-to-top" aria-label="Back to Top"><i class="fa-solid fa-arrow-up"></i></div>
+
+  <!-- Core Javascript Files -->
+  <!-- Bootstrap 5 Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- AOS Scroll Reveal JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- GSAP Core Animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+  <!-- Shared Translation Data -->
+  <script src="../shared/js/translations.js"></script>
+  <!-- Shared Global JS Components -->
+  <script src="../shared/js/global.js"></script>
+  <script src="../shared/js/hearts.js"></script>
+
+  <!-- Reasons Page Specific JS -->
+  <script src="js/script.js"></script>
+</body>
+</html>

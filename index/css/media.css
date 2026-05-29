@@ -1,0 +1,112 @@
+/*
+  =========================================
+  Luxury Romantic Birthday Website
+  Home Page Responsive Stylesheet
+  =========================================
+*/
+
+@media (max-width: 991px) {
+  .hero-title {
+    font-size: 3.8rem;
+  }
+
+  .highlight-gold {
+    font-size: 4.2rem;
+  }
+
+  .section-title {
+    font-size: 2.3rem;
+  }
+
+  .quote-card {
+    padding: 50px 30px;
+  }
+
+  .romantic-lead {
+    font-size: 1.35rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 100px 15px;
+  }
+
+  .hero-title {
+    font-size: 2.8rem;
+  }
+
+  .highlight-gold {
+    font-size: 3.2rem;
+  }
+
+  .hero-pre-title {
+    font-size: 1rem;
+    letter-spacing: 2px;
+  }
+
+  .hero-typed-container {
+    height: 60px; /* More room for wrapping text */
+  }
+
+  #typed-birthday-message {
+    font-size: 1.25rem;
+  }
+
+  .typed-cursor {
+    font-size: 1.25rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .romantic-lead {
+    font-size: 1.2rem;
+    line-height: 1.7;
+  }
+
+  .quote-author {
+    font-size: 1.8rem;
+  }
+
+  .chapter-card {
+    padding: 30px 20px;
+  }
+
+  .romantic-swiper {
+    padding: 10px 10px 50px 10px !important;
+  }
+
+  .slider-card {
+    padding: 35px 25px;
+  }
+
+  .slider-card p {
+    font-size: 1.15rem;
+    line-height: 1.7;
+  }
+
+  .slider-card h5 {
+    font-size: 1.6rem;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none !important; /* Hide navigation arrows on small mobile screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .highlight-gold {
+    font-size: 2.5rem;
+  }
+
+  #typed-birthday-message {
+    font-size: 1.1rem;
+  }
+}

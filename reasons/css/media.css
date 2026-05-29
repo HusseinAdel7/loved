@@ -1,0 +1,72 @@
+/*
+  =========================================
+  Luxury Romantic Birthday Website
+  Reasons I Love You Responsive CSS
+  =========================================
+*/
+
+@media (max-width: 991px) {
+  .reasons-main-title {
+    font-size: 3.2rem;
+  }
+
+  .reasons-lead-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .flip-card-container {
+    height: 340px;
+  }
+}
+
+@media (max-width: 768px) {
+  .reasons-hero {
+    padding: 120px 15px 30px 15px;
+  }
+
+  .reasons-main-title {
+    font-size: 2.5rem;
+  }
+
+  .glowing-heart-pulse {
+    width: 80px;
+    height: 80px;
+  }
+
+  .flip-card-container {
+    height: 330px;
+  }
+
+  .flip-card-front,
+  .flip-card-back {
+    padding: 25px 20px;
+  }
+
+  .reason-badge {
+    margin-bottom: 20px;
+  }
+
+  .front-heart-icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+
+  .reason-text-block {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 480px) {
+  .reasons-main-title {
+    font-size: 2rem;
+  }
+
+  .flip-card-container {
+    height: 320px;
+  }
+
+  .reason-text-block {
+    font-size: 0.9rem;
+  }
+}

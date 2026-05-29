@@ -1,0 +1,220 @@
+/*
+  =========================================
+  Luxury Romantic Birthday Website
+  Birthday Countdown Specific CSS
+  =========================================
+*/
+
+/* Star Field Background Canvas */
+#stars-field-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.85;
+}
+
+/* 1. Countdown Hero Section */
+.countdown-hero {
+  padding: 150px 20px 40px 20px;
+  position: relative;
+}
+
+.countdown-main-title {
+  font-size: 4rem;
+  color: var(--text-primary);
+  text-shadow: 0 0 15px var(--primary-glow);
+  margin-bottom: 20px;
+}
+
+.countdown-lead-subtitle {
+  font-family: var(--font-luxury);
+  font-style: italic;
+  font-size: 1.25rem;
+  color: var(--text-muted);
+  letter-spacing: 2px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* 2. Neon Digital Countdown Clock */
+.clock-card {
+  padding: 30px 15px;
+  border-radius: 20px;
+  border-color: rgba(212, 175, 55, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(212, 175, 55, 0.08);
+}
+
+.clock-number {
+  font-family: var(--font-luxury);
+  font-size: 3.8rem;
+  font-weight: 700;
+  color: var(--accent-gold);
+  text-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+  line-height: 1.1;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.clock-label {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  display: block;
+}
+
+/* Seconds Box Highlight */
+.highlight-sec-card {
+  border-color: rgba(217, 27, 92, 0.35);
+  box-shadow: 0 8px 32px 0 rgba(217, 27, 92, 0.15);
+}
+
+.text-magenta {
+  color: var(--primary-color);
+  text-shadow: 0 0 15px var(--primary-glow);
+}
+
+.text-magenta-label {
+  color: var(--primary-color);
+  text-shadow: 0 0 5px rgba(217,27,92,0.2);
+}
+
+/* Auto Changing Message Banner */
+.banner-card {
+  padding: 25px 40px !important;
+}
+
+#countdown-dynamic-note {
+  font-size: 2.2rem;
+  color: var(--text-primary);
+  text-shadow: 0 0 10px var(--primary-glow);
+  margin-bottom: 0;
+  transition: opacity 0.5s ease;
+}
+
+/* 3. Interactive Wish Board Card */
+.wish-form-card {
+  padding: 50px 40px !important;
+  text-align: center;
+  position: relative;
+  overflow: visible;
+}
+
+.wish-form-card .card-icon {
+  position: absolute;
+  top: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70px;
+  height: 70px;
+  background: var(--bg-dark-base);
+  border: 1px solid var(--border-glass);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary-color);
+  font-size: 1.8rem;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  animation: heartbeat 1.5s infinite ease-in-out;
+}
+
+.wish-form-card h3 {
+  font-size: 1.6rem;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.wish-input-wrapper {
+  background: rgba(10, 1, 12, 0.4);
+  border: 1px solid var(--border-glass);
+  border-radius: 15px;
+  padding: 15px;
+  transition: var(--transition-fast);
+}
+
+.wish-input-wrapper:focus-within {
+  border-color: rgba(217, 27, 92, 0.5);
+  box-shadow: 0 0 15px rgba(217, 27, 92, 0.15);
+}
+
+.wish-input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--text-primary);
+  font-family: var(--font-luxury);
+  font-size: 1.15rem;
+  font-style: italic;
+  resize: none;
+}
+
+.wish-input::placeholder {
+  color: rgba(203, 180, 205, 0.4);
+}
+
+/* 4. Drifting Floating Wishes Layer */
+#wishes-floating-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 100;
+  overflow: hidden;
+}
+
+/* Floating custom heart wish element styling */
+.floating-wish-heart {
+  position: absolute;
+  background: rgba(217, 27, 92, 0.25);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(217, 27, 92, 0.35);
+  padding: 20px;
+  border-radius: 20px;
+  color: var(--text-primary);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  max-width: 250px;
+  text-align: center;
+  font-size: 0.9rem;
+  font-family: var(--font-luxury);
+  font-style: italic;
+  pointer-events: none;
+  animation: floatUpWish 12s linear forwards;
+}
+
+.floating-wish-heart::before {
+  content: '❤';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(217, 27, 92, 0.4);
+  font-size: 1.2rem;
+}
+
+@keyframes floatUpWish {
+  0% {
+    transform: translateY(105vh) scale(0.7) rotate(-5deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-20vh) scale(1.1) rotate(15deg);
+    opacity: 0;
+  }
+}

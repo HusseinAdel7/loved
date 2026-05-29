@@ -1,0 +1,271 @@
+/*
+  =========================================
+  Luxury Romantic Birthday Website
+  Love Story Timeline Specific CSS
+  =========================================
+*/
+
+/* 1. Timeline Hero Banner */
+.timeline-hero {
+  padding: 150px 20px 80px 20px;
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(circle at center, rgba(112, 27, 168, 0.2) 0%, rgba(10, 1, 12, 0.8) 100%);
+}
+
+.timeline-main-title {
+  font-size: 4rem;
+  color: var(--text-primary);
+  text-shadow: 0 0 15px var(--primary-glow);
+  margin-bottom: 20px;
+}
+
+.timeline-lead-subtitle {
+  font-family: var(--font-luxury);
+  font-style: italic;
+  font-size: 1.25rem;
+  color: var(--text-muted);
+  letter-spacing: 2px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.timeline-hero-divider {
+  font-size: 1.5rem;
+  color: var(--accent-gold);
+  margin-top: 25px;
+  text-shadow: 0 0 10px var(--accent-gold-glow);
+  position: relative;
+  display: inline-block;
+}
+
+.timeline-hero-divider::before,
+.timeline-hero-divider::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 100px;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--accent-gold));
+}
+
+.timeline-hero-divider::before {
+  right: 100%;
+  margin-right: 20px;
+  background: linear-gradient(to left, var(--accent-gold), transparent);
+}
+
+.timeline-hero-divider::after {
+  left: 100%;
+  margin-left: 20px;
+}
+
+/* 2. Interactive Center Line Timeline Layout */
+.timeline-section {
+  padding: 80px 0;
+  position: relative;
+}
+
+.timeline-section .container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Central vertical glowing timeline wire */
+.timeline-glowing-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, 
+    var(--accent-gold) 0%, 
+    var(--primary-color) 40%, 
+    var(--secondary-color) 80%, 
+    var(--accent-gold) 100%
+  );
+  transform: translateX(-50%);
+  box-shadow: 0 0 15px rgba(217, 27, 92, 0.4), 0 0 30px rgba(112, 27, 168, 0.2);
+  z-index: 1;
+}
+
+/* Timeline Item base */
+.timeline-item {
+  position: relative;
+  width: 100%;
+  margin-bottom: 90px;
+  display: flex;
+  z-index: 2;
+}
+
+/* Alignment rules */
+.timeline-item.left-aligned {
+  justify-content: flex-start;
+}
+
+.timeline-item.right-aligned {
+  justify-content: flex-end;
+}
+
+/* Timeline card dimensions */
+.timeline-card {
+  width: 44%;
+  padding: 40px 35px;
+  position: relative;
+  border-radius: 25px;
+}
+
+.timeline-card h3 {
+  font-size: 1.45rem;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.timeline-card p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.75;
+}
+
+/* Icons inside timeline cards */
+.card-icon {
+  position: absolute;
+  top: -30px;
+  width: 60px;
+  height: 60px;
+  background: var(--bg-dark-base);
+  border: 1px solid var(--border-glass);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary-color);
+  font-size: 1.45rem;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  transition: var(--transition-smooth);
+}
+
+.left-aligned .card-icon {
+  right: 40px;
+}
+
+.right-aligned .card-icon {
+  left: 40px;
+}
+
+.card-icon.gold-icon {
+  color: var(--accent-gold);
+  border-color: rgba(212, 175, 55, 0.3);
+}
+
+.timeline-card:hover .card-icon {
+  background: var(--primary-color);
+  color: white;
+  box-shadow: 0 0 20px var(--primary-glow);
+  transform: translateY(-5px) rotate(360deg);
+}
+
+.timeline-card:hover .card-icon.gold-icon {
+  background: var(--accent-gold);
+  color: var(--bg-dark-base);
+  box-shadow: 0 0 20px var(--accent-gold-glow);
+}
+
+/* Date Badges Floating in center */
+.timeline-date-badge {
+  position: absolute;
+  left: 50%;
+  top: 15px;
+  transform: translateX(-50%);
+  padding: 8px 20px;
+  background: rgba(15, 2, 20, 0.85);
+  backdrop-filter: blur(5px);
+  border: 1px solid var(--border-glass);
+  color: var(--accent-gold);
+  font-family: var(--font-luxury);
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 1.5px;
+  border-radius: 50px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+  z-index: 10;
+}
+
+/* Custom Highlight timeline card (Proposal) */
+.highlight-timeline-card {
+  border-color: rgba(212, 175, 55, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(212, 175, 55, 0.12);
+}
+
+.highlight-timeline-card:hover {
+  border-color: var(--accent-gold);
+  box-shadow: 0 12px 40px 0 rgba(212, 175, 55, 0.22);
+}
+
+.today-badge {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  color: white;
+  box-shadow: 0 0 15px var(--primary-glow);
+  font-weight: 700;
+}
+
+/* 3. Pulsing central node dots */
+.timeline-dot-pulse {
+  position: absolute;
+  left: 50%;
+  top: 25px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--accent-gold);
+  transform: translateX(-50%);
+  z-index: 9;
+  box-shadow: 0 0 15px var(--accent-gold-glow);
+}
+
+.timeline-dot-pulse::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: inherit;
+  animation: pulse-dot 1.8s infinite cubic-bezier(0.24, 0, 0.38, 1);
+}
+
+.left-aligned .timeline-dot-pulse {
+  background: var(--primary-color);
+  box-shadow: 0 0 15px var(--primary-glow);
+}
+
+.today-pulse {
+  background: var(--accent-gold);
+  box-shadow: 0 0 20px var(--accent-gold-glow);
+}
+
+@keyframes pulse-dot {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(2.8); opacity: 0; }
+}
+
+/* 4. Timeline CTA Layout */
+.cta-box {
+  padding: 50px 40px;
+  margin: 0 auto;
+}
+
+.max-600 {
+  max-width: 600px;
+}
+
+.gold-text {
+  color: var(--accent-gold);
+  text-shadow: 0 0 10px var(--accent-gold-glow);
+  font-size: 2.6rem;
+  margin-bottom: 15px;
+}

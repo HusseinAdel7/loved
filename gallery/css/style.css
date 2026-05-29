@@ -1,0 +1,340 @@
+/*
+  =========================================
+  Luxury Romantic Birthday Website
+  Memories Gallery Specific CSS
+  =========================================
+*/
+
+/* 1. Gallery Hero Section */
+.gallery-hero {
+  padding: 150px 20px 60px 20px;
+  position: relative;
+}
+
+.gallery-main-title {
+  font-size: 4rem;
+  color: var(--text-primary);
+  text-shadow: 0 0 15px var(--primary-glow);
+  margin-bottom: 20px;
+}
+
+.gallery-lead-subtitle {
+  font-family: var(--font-luxury);
+  font-style: italic;
+  font-size: 1.25rem;
+  color: var(--text-muted);
+  letter-spacing: 2px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* 2. Category Filter Tabs */
+.gallery-filter-section {
+  margin-bottom: 50px;
+}
+
+.filter-group-container {
+  display: inline-flex;
+  gap: 15px;
+  padding: 10px 25px !important;
+  border-radius: 50px !important;
+}
+
+.btn-filter {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  padding: 8px 22px;
+  border-radius: 50px;
+  font-family: var(--font-luxury);
+  font-size: 0.9rem;
+  letter-spacing: 1.5px;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.btn-filter:hover {
+  color: var(--accent-gold);
+  text-shadow: 0 0 5px var(--accent-gold-glow);
+}
+
+.btn-filter.active {
+  background: var(--primary-color);
+  color: white;
+  box-shadow: 0 0 15px var(--primary-glow);
+}
+
+/* 3. Polaroid Layout Design */
+.gallery-item {
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Hidden items via JavaScript filtering */
+.gallery-item.hidden {
+  display: none !important;
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+.polaroid-card {
+  background: #fbf9f6; /* Premium soft paper white */
+  padding: 18px 18px 28px 18px;
+  border-radius: 4px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+  transition: transform 0.5s cubic-bezier(0.2, 1, 0.3, 1), box-shadow 0.5s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Alternating subtle rotations for vintage/romantic feel */
+.gallery-item:nth-child(odd) .polaroid-card {
+  transform: rotate(-1.5deg);
+}
+
+.gallery-item:nth-child(even) .polaroid-card {
+  transform: rotate(1.5deg);
+}
+
+.polaroid-card:hover {
+  transform: scale(1.06) rotate(0deg) translateY(-8px) !important;
+  box-shadow: 0 20px 45px rgba(217, 27, 92, 0.3);
+  z-index: 10;
+}
+
+.polaroid-photo-wrapper {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* Force perfect square aspect ratio */
+  overflow: hidden;
+  border-radius: 2px;
+  border: 1px solid rgba(0,0,0,0.06);
+  position: relative;
+}
+
+/* Premium Abstract Vector Gradient Artworks */
+.polaroid-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.8s ease;
+}
+
+.polaroid-card:hover .polaroid-placeholder {
+  transform: scale(1.1);
+}
+
+.absolute-icon {
+  font-size: 3.5rem;
+  color: white;
+  text-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  z-index: 2;
+  transition: var(--transition-smooth);
+}
+
+.polaroid-card:hover .absolute-icon {
+  transform: scale(1.15);
+  text-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
+}
+
+.glow-bubble {
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.15);
+  filter: blur(25px);
+  z-index: 1;
+  animation: pulse-bubble 4s infinite alternate ease-in-out;
+}
+
+@keyframes pulse-bubble {
+  0% { transform: scale(0.9); opacity: 0.5; }
+  100% { transform: scale(1.2); opacity: 0.9; }
+}
+
+/* Custom Gradients definitions */
+.gradient-sunset { background: linear-gradient(135deg, #ff7e5f 0%, #feb47b 100%); }
+.gradient-candlelight { background: linear-gradient(135deg, #ff6a00 0%, #ee0979 100%); }
+.gradient-rose { background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%); }
+.gradient-ocean { background: linear-gradient(135deg, #2b5876 0%, #4e4376 100%); }
+.gradient-aurora { background: linear-gradient(135deg, #7028e4 0%, #e0c3fc 100%); }
+.gradient-love { background: linear-gradient(135deg, #ff0844 0%, #ffb199 100%); }
+.gradient-magic { background: linear-gradient(135deg, #f6d365 0%, #fda085 100%); }
+.gradient-fire { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
+
+/* Polaroid Caption text style */
+.polaroid-caption {
+  padding-top: 20px;
+  text-align: center;
+}
+
+.polaroid-caption h4 {
+  font-family: var(--font-luxury);
+  color: #2b0c30;
+  font-size: 1.15rem;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.polaroid-caption p {
+  font-family: var(--font-cursive);
+  color: var(--primary-color);
+  font-size: 1.35rem;
+  margin-bottom: 0;
+}
+
+/* 4. Fullscreen Glassmorphic Lightbox Overlay */
+.lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(5, 1, 8, 0.96);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 2000;
+  transition: var(--transition-smooth);
+}
+
+.lightbox-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lightbox-content-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 40px;
+  width: 90%;
+  max-width: 950px;
+  z-index: 2001;
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  transform: scale(0.9);
+}
+
+.lightbox-overlay.active .lightbox-content-box {
+  transform: scale(1);
+}
+
+/* Lightbox Visual Display */
+.lightbox-visual-display {
+  flex: 1.2;
+  aspect-ratio: 4 / 3;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+}
+
+#lightbox-art-icon {
+  font-size: 7rem;
+  color: white;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  z-index: 2;
+  animation: heart-beat 2.5s infinite ease-in-out;
+}
+
+/* Lightbox Details Panel */
+.lightbox-details-panel {
+  flex: 0.8;
+  padding: 40px !important;
+}
+
+#lightbox-title {
+  font-size: 2.2rem;
+  color: var(--accent-gold);
+  text-shadow: 0 0 10px var(--accent-gold-glow);
+  margin-bottom: 5px;
+}
+
+#lightbox-subtitle {
+  font-family: var(--font-luxury);
+  color: var(--text-muted);
+  font-size: 1rem;
+  letter-spacing: 1.5px;
+  margin-bottom: 25px;
+}
+
+.lightbox-divider {
+  width: 100%;
+  height: 1px;
+  background: var(--border-glass);
+  margin-bottom: 25px;
+}
+
+.lightbox-quote {
+  font-size: 1.85rem;
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+/* Lightbox UI Buttons */
+.lightbox-close {
+  position: absolute;
+  top: 35px;
+  right: 35px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-glass);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: var(--accent-gold);
+  font-size: 1.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 2002;
+  transition: var(--transition-fast);
+}
+
+.lightbox-close:hover {
+  background: var(--primary-color);
+  color: white;
+  box-shadow: 0 0 15px var(--primary-glow);
+  transform: rotate(90deg);
+}
+
+.lightbox-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-glass);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  color: var(--text-muted);
+  font-size: 1.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 2002;
+  transition: var(--transition-fast);
+}
+
+.lightbox-arrow:hover {
+  background: rgba(217,27,92,0.15);
+  color: var(--accent-gold);
+  border-color: rgba(212,175,55,0.4);
+}
+
+.arrow-left { left: 40px; }
+.arrow-right { right: 40px; }

@@ -1,0 +1,219 @@
+/*
+  =========================================
+  Luxury Romantic Birthday Website
+  Reasons I Love You Specific CSS
+  =========================================
+*/
+
+/* 1. Reasons Hero Header */
+.reasons-hero {
+  padding: 150px 20px 40px 20px;
+  position: relative;
+}
+
+.reasons-main-title {
+  font-size: 4rem;
+  color: var(--text-primary);
+  text-shadow: 0 0 15px var(--primary-glow);
+  margin-bottom: 20px;
+}
+
+.reasons-lead-subtitle {
+  font-family: var(--font-luxury);
+  font-style: italic;
+  font-size: 1.25rem;
+  color: var(--text-muted);
+  letter-spacing: 2px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* 2. Interactive SVG Heart Centerpiece */
+.heart-centerpiece-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  margin-bottom: 30px;
+}
+
+.glowing-heart-pulse {
+  width: 90px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  animation: heartPulseCenter 2.2s infinite ease-in-out;
+  transition: var(--transition-smooth);
+}
+
+.heart-svg {
+  width: 100%;
+  height: 100%;
+  fill: var(--primary-color);
+  filter: drop-shadow(0 0 15px var(--primary-glow));
+  transition: var(--transition-smooth);
+}
+
+/* Heart centerpiece active/excited speed state (when card flipped) */
+.glowing-heart-pulse.excited {
+  animation: heartPulseCenter 0.8s infinite ease-in-out;
+}
+
+.glowing-heart-pulse.excited .heart-svg {
+  fill: #ff3366;
+  filter: drop-shadow(0 0 25px rgba(255, 51, 102, 0.95));
+}
+
+@keyframes heartPulseCenter {
+  0% { transform: scale(1); }
+  25% { transform: scale(1.15); }
+  40% { transform: scale(1); }
+  60% { transform: scale(1.22); }
+  100% { transform: scale(1); }
+}
+
+/* 3. 3D Flip Cards Grid */
+.flip-card-container {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  perspective: 1200px; /* Crucial for 3D card flipping perspective */
+  cursor: pointer;
+}
+
+.flip-card-inner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* Toggle flip trigger class */
+.flip-card-container.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Face Panel rules */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden; /* iOS safari support */
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+/* Front Side Styling */
+.flip-card-front {
+  border-color: var(--border-glass);
+}
+
+.reason-badge {
+  border: 1px solid var(--accent-gold);
+  color: var(--accent-gold);
+  padding: 4px 14px;
+  border-radius: 50px;
+  font-family: var(--font-luxury);
+  font-size: 0.75rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  box-shadow: 0 0 10px rgba(212,175,55,0.1);
+}
+
+.front-heart-icon {
+  font-size: 3rem;
+  color: var(--primary-color);
+  margin-bottom: 25px;
+  text-shadow: 0 0 15px var(--primary-glow);
+  animation: float-slow 4s infinite ease-in-out;
+}
+
+.flip-card-front h3 {
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.click-reveal-prompt {
+  font-family: var(--font-luxury);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+  font-style: italic;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  opacity: 0.7;
+}
+
+.flip-card-container:hover .click-reveal-prompt {
+  opacity: 1;
+  color: var(--accent-gold);
+  text-shadow: 0 0 5px var(--accent-gold-glow);
+}
+
+/* Back Side Styling (turned 180 degrees) */
+.flip-card-back {
+  background: rgba(30, 5, 35, 0.95);
+  border: 1px solid rgba(217, 27, 92, 0.3);
+  box-shadow: 0 15px 40px rgba(217, 27, 92, 0.15);
+  transform: rotateY(180deg);
+  text-align: center;
+}
+
+.flip-card-back h3 {
+  font-size: 1.45rem;
+  color: var(--accent-gold);
+  text-shadow: 0 0 8px var(--accent-gold-glow);
+  margin-bottom: 15px;
+}
+
+.back-divider {
+  width: 50px;
+  height: 1px;
+  background: var(--accent-gold);
+  margin-bottom: 20px;
+}
+
+.reason-text-block {
+  font-family: var(--font-luxury);
+  font-size: 1.1rem;
+  font-style: italic;
+  line-height: 1.7;
+  color: var(--text-primary);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.5s ease 0.3s, transform 0.5s ease 0.3s;
+}
+
+/* Trigger reveal text once flipped */
+.flip-card-container.flipped .reason-text-block {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.text-magenta-border {
+  border-color: rgba(217, 27, 92, 0.6) !important;
+}
+
+/* Pulse action on Surprises button */
+.btn-pulse {
+  animation: btnPulseGlow 2s infinite ease-in-out;
+}
+
+@keyframes btnPulseGlow {
+  0%, 100% { box-shadow: 0 0 10px rgba(212, 175, 55, 0.2); }
+  50% { box-shadow: 0 0 25px rgba(212, 175, 55, 0.7); }
+}
