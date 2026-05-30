@@ -18,7 +18,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const heartCenterpiece = document.getElementById("central-pulsing-heart");
 
   cards.forEach((card) => {
-    card.addEventListener("click", () => {
+    card.addEventListener("click", (e) => {
+      // If the clicked element is the quest key or inside it, do NOT flip the card
+      if (e.target.closest(".glowing-quest-key")) {
+        return;
+      }
+
       // Toggle flipped state
       card.classList.toggle("flipped");
 

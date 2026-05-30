@@ -79,7 +79,7 @@
 .flip-card-container {
   position: relative;
   width: 100%;
-  height: 350px;
+  height: 380px;
   perspective: 1200px;
   cursor: pointer;
 }
@@ -216,4 +216,22 @@
 @keyframes btnPulseGlow {
   0%, 100% { box-shadow: 0 0 10px rgba(255, 0, 60, 0.2); }
   50% { box-shadow: 0 0 25px rgba(255, 0, 60, 0.7); }
+}
+
+/* Fix global .glass-card:hover override conflict that causes card shaking/jiggling in 3D space */
+.flip-card-front.glass-card:hover {
+  transform: none !important;
+}
+
+.flip-card-back.glass-card:hover {
+  transform: rotateY(180deg) !important;
+}
+
+/* Apply smooth hover translate to the entire container instead */
+.flip-card-container {
+  transition: var(--transition-smooth);
+}
+
+.flip-card-container:hover {
+  transform: translateY(-5px);
 }

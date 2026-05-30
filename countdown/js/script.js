@@ -5,7 +5,8 @@
   =========================================
 */
 
-let currentLanguage = "en";
+// currentLanguage is declared globally in global.js
+currentLanguage = "en";
 let noteIndex = 0;
 let noteEl = null;
 
@@ -131,11 +132,15 @@ function initStarsBackground() {
    ========================================== */
 function initCountdownClock() {
   const currentYear = new Date().getFullYear();
-  let targetTime = new Date(`June 14, ${currentYear} 00:00:00`).getTime();
+  
+  // Cross-browser bulletproof integer arguments: year, monthIndex (5 = June), day (14), hours (0), minutes (0), seconds (0)
+  // This bypasses string parsing entirely and NEVER returns NaN
+  let targetTime = new Date(currentYear, 5, 14, 0, 0, 0).getTime();
   const now = new Date().getTime();
   
+  // If birthday has passed this year, set target to next year's date
   if (targetTime < now) {
-    targetTime = new Date(`June 14, ${currentYear + 1} 00:00:00`).getTime();
+    targetTime = new Date(currentYear + 1, 5, 14, 0, 0, 0).getTime();
   }
 
   const daysEl = document.getElementById("clock-days");
@@ -149,11 +154,13 @@ function initCountdownClock() {
     const currentTime = new Date().getTime();
     const difference = targetTime - currentTime;
 
+    // Standard time metrics
     const d = Math.floor(difference / (1000 * 60 * 60 * 24));
     const h = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const m = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
     const s = Math.floor((difference % (1000 * 60)) / 1000);
 
+    // Render numbers, guaranteeing padded formats
     daysEl.innerText = String(d).padStart(2, '0');
     hoursEl.innerText = String(h).padStart(2, '0');
     minutesEl.innerText = String(m).padStart(2, '0');
@@ -179,7 +186,6 @@ function initLoveNoteCycler() {
   noteEl = document.getElementById("countdown-dynamic-note");
   if (!noteEl) return;
 
-  // Render initial note based on locale
   const pool = currentLanguage === "ar" ? notesAR : notesEN;
   noteEl.innerText = pool[noteIndex];
   

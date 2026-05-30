@@ -73,7 +73,12 @@ document.addEventListener("DOMContentLoaded", () => {
     card.setAttribute("data-icon", iconClass);
 
     // Attach click listener to launch Lightbox
-    card.addEventListener("click", () => {
+    card.addEventListener("click", (e) => {
+      // If the clicked element is the quest key or inside it, do NOT open the Lightbox
+      if (e.target.closest(".glowing-quest-key")) {
+        return;
+      }
+
       visibleCards = Array.from(document.querySelectorAll(".gallery-item:not(.hidden) .polaroid-card"));
       activeIndex = visibleCards.indexOf(card);
       
