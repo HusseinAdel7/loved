@@ -210,6 +210,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const sealBtn = document.getElementById("trigger-seal");
   const closeScrollBtn = document.getElementById("btn-close-scroll");
   
+  const customNavbar = document.querySelector(".custom-navbar");
   const headerBlock = document.getElementById("surprise-header-block");
   const ctaBlock = document.getElementById("surprise-footer-cta");
   const footerBlock = document.getElementById("surprise-shared-footer");
@@ -240,6 +241,9 @@ document.addEventListener("DOMContentLoaded", () => {
     headerBlock.classList.add("fade-hidden");
     ctaBlock.classList.add("fade-hidden");
     footerBlock.classList.add("fade-hidden");
+    if (customNavbar) {
+      customNavbar.classList.add("fade-hidden");
+    }
 
     setTimeout(() => {
       neonDeclaration.classList.add("visible");
@@ -257,23 +261,176 @@ document.addEventListener("DOMContentLoaded", () => {
   closeScrollBtn.addEventListener("click", (e) => {
     e.stopPropagation();
     
-    grandEnvelope.classList.remove("open");
-
-    headerBlock.classList.remove("fade-hidden");
-    ctaBlock.classList.remove("fade-hidden");
-    footerBlock.classList.remove("fade-hidden");
-    neonDeclaration.classList.remove("visible");
-
-    isEffectsRunning = false;
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    fireworks = [];
-    particles = [];
-    confetti = [];
-
+    // Stop autoscrolling
     autoScrollActive = false;
     if (scrollAnimationFrame) cancelAnimationFrame(scrollAnimationFrame);
     scrollerBox.scrollTop = 0;
+
+    // Fade out letter envelope & declaration block, but keep fireworks running
+    grandEnvelope.style.transition = "opacity 0.8s ease";
+    grandEnvelope.style.opacity = "0";
+    grandEnvelope.style.pointerEvents = "none";
+    neonDeclaration.classList.remove("visible");
+
+    // Unveil Virtual Cake Overlay
+    const cakeOverlay = document.getElementById("cake-ceremony-overlay");
+    const wishBox = document.getElementById("cake-wish-box");
+    if (cakeOverlay) {
+      // Reset candles
+      const candles = cakeOverlay.querySelectorAll(".candle");
+      candles.forEach(c => c.classList.remove("blown"));
+      if (wishBox) {
+        wishBox.classList.remove("visible");
+      }
+      
+      cakeOverlay.classList.add("visible");
+    }
   });
+
+  // Candle Blow-out & Wishes ceremony
+  const cakeOverlay = document.getElementById("cake-ceremony-overlay");
+  const wishBox = document.getElementById("cake-wish-box");
+  const finishBtn = document.getElementById("btn-finish-celebration");
+
+  if (cakeOverlay) {
+    const flames = cakeOverlay.querySelectorAll(".flame");
+    flames.forEach(flame => {
+      flame.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const candle = flame.closest(".candle");
+        if (candle && !candle.classList.contains("blown")) {
+          candle.classList.add("blown");
+          
+          // Sound and spark effect
+          if (typeof triggerSparkleBurst === "function") {
+            triggerSparkleBurst(e.clientX, e.clientY);
+          }
+          if (typeof playChimeSound === "function") {
+            playChimeSound();
+          }
+
+          // Check if all 3 candles blown out
+          const blownCount = cakeOverlay.querySelectorAll(".candle.blown").length;
+          if (blownCount === 3) {
+            // Blowout complete!
+            // 1. Massive fireworks explosion
+            for (let i = 0; i < 6; i++) {
+              setTimeout(() => {
+                const randX = Math.random() * (canvas.width - 200) + 100;
+                const randY = Math.random() * (canvas.height / 2) + 50;
+                explode(randX, randY, Math.random() * 360);
+              }, i * 250);
+            }
+            
+            // 2. Spawn balloons
+            spawnBalloons();
+            
+            // 3. Show birthday wish message
+            if (wishBox) {
+              setTimeout(() => {
+                wishBox.classList.add("visible");
+              }, 600);
+            }
+          }
+        }
+      });
+    });
+  }
+
+  // Balloon Spawning and Popping
+  function spawnBalloons() {
+    const container = document.getElementById("balloons-container");
+    if (!container) return;
+    
+    container.innerHTML = "";
+    const balloonColors = [
+      "#ff4d6d", "#ff758f", "#ff8fa3", "#ffb3c1", "#c9184a",
+      "#ffccd5", "#ff85a1", "#f15bb5", "#fee440", "#00bbf9", "#00f5d4"
+    ];
+    
+    for (let i = 0; i < 28; i++) {
+      const balloon = document.createElement("div");
+      balloon.className = "floating-balloon";
+      
+      const size = Math.random() * 25 + 40; // 40px to 65px
+      const color = balloonColors[Math.floor(Math.random() * balloonColors.length)];
+      
+      balloon.style.backgroundColor = color;
+      balloon.style.boxShadow = `inset -12px -12px 0 rgba(0,0,0,0.08), 0 10px 22px ${color}55`;
+      balloon.style.width = `${size}px`;
+      balloon.style.height = `${size * 1.25}px`;
+      
+      balloon.style.left = `${Math.random() * 88 + 6}%`;
+      balloon.style.animationDelay = `${Math.random() * 4.5}s`;
+      balloon.style.animationDuration = `${Math.random() * 6 + 7}s`; // 7s to 13s
+      
+      const string = document.createElement("div");
+      string.className = "balloon-string";
+      balloon.appendChild(string);
+      
+      balloon.addEventListener("click", (evt) => {
+        evt.stopPropagation();
+        popBalloon(balloon, evt.clientX, evt.clientY);
+      });
+      
+      container.appendChild(balloon);
+    }
+  }
+
+  function popBalloon(balloon, x, y) {
+    if (balloon.classList.contains("popped")) return;
+    balloon.classList.add("popped");
+    
+    if (typeof triggerSparkleBurst === "function") {
+      triggerSparkleBurst(x, y);
+    }
+    if (typeof playChimeSound === "function") {
+      playChimeSound();
+    }
+    
+    // Firework explosion at pop coordinates
+    explode(x, y, Math.random() * 360);
+
+    setTimeout(() => {
+      balloon.remove();
+    }, 250);
+  }
+
+  if (finishBtn) {
+    finishBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      
+      // Hide cake overlay
+      if (cakeOverlay) {
+        cakeOverlay.classList.remove("visible");
+      }
+      
+      // Clean up balloons
+      const container = document.getElementById("balloons-container");
+      if (container) container.innerHTML = "";
+
+      // Restore envelope state
+      grandEnvelope.classList.remove("open");
+      grandEnvelope.style.opacity = "1";
+      grandEnvelope.style.pointerEvents = "auto";
+
+      // Fade elements back in
+      headerBlock.classList.remove("fade-hidden");
+      ctaBlock.classList.remove("fade-hidden");
+      footerBlock.classList.remove("fade-hidden");
+      if (customNavbar) {
+        customNavbar.classList.remove("fade-hidden");
+      }
+      neonDeclaration.classList.remove("visible");
+
+      // Stop celebration canvas effects
+      isEffectsRunning = false;
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      fireworks = [];
+      particles = [];
+      confetti = [];
+    });
+  }
 
   const pauseAutoScroll = () => {
     if (autoScrollActive) {

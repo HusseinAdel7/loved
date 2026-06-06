@@ -162,6 +162,11 @@ const translations = {
     surprise_cta_title: "Back to our beginning...",
     surprise_cta_p: "Restart our love journey or return to the main dashboard.",
     surprise_cta_btn: "Return to Home",
+    cake_title: "Make a Wish, My Princess Alaa! 🎂",
+    cake_subtitle: "Click the burning candles to blow them out...",
+    wish_revealed_title: "Your Wish is Safe in My Heart! 🎉",
+    wish_revealed_text: "Happy Birthday, my gorgeous Alaa! May this year bring you absolute joy, laughter, and everything your beautiful heart desires. I promise to stand by your side and make you smile for all of my forever. ❤",
+    btn_finish_celebration: "Complete Celebration & Return",
 
     // 8. Shared Footer Quotes
     footer_quote_home: "\"Happy Birthday, My Entire Universe, Alaa.\"",
@@ -339,6 +344,11 @@ const translations = {
     surprise_cta_title: "العودة لبداية رحلتنا المشتركة...",
     surprise_cta_p: "أعيدي تشغيل فصول قصة حبنا أو عودي إلى واجهة التحكم والتحويل الرئيسية للموقع.",
     surprise_cta_btn: "العودة للرئيسية",
+    cake_title: "تمنّي أمنية يا أميرتي الغالية الاء! 🎂",
+    cake_subtitle: "انقري على الشموع المضيئة لإطفائها بالكامل...",
+    wish_revealed_title: "أمنيتكِ محفوظة في أعماق قلبي! 🎉",
+    wish_revealed_text: "عيد ميلاد سعيد يا ملاكي الاء! أتمنى أن يحمل لكِ هذا العام سعادة مطلقة، وضحكات دافئة، وكل ما يتمناه قلبكِ الطيب النقي. أعدكِ بأن أظل بجانبكِ وأن أسعى لإسعادكِ طوال العمر. ❤",
+    btn_finish_celebration: "إنهاء الاحتفال والعودة",
 
     // 8. Shared Footer Quotes
     footer_quote_home: "\"عيد ميلاد سعيد لكوني الصغير وعالمي بأكمله يا الاء.\"",

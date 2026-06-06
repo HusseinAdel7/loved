@@ -316,3 +316,277 @@
   background: rgba(255, 255, 255, 0.9) !important;
   box-shadow: 0 15px 40px rgba(255, 0, 60, 0.18) !important;
 }
+
+/* 5. Custom Navbar Hiding & Ceremony CSS */
+.custom-navbar.fade-hidden {
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transform: translate(-50%, -30px) !important;
+}
+
+/* Birthday Cake Ceremony Overlay */
+.birthday-cake-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 245, 247, 0.96);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  z-index: 1001;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+.birthday-cake-overlay.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.cake-card {
+  max-width: 550px;
+  width: 90%;
+  padding: 40px 30px;
+  border: 1px solid var(--border-glass) !important;
+  box-shadow: 0 20px 50px rgba(255, 0, 60, 0.12) !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 24px;
+}
+
+.cake-title {
+  color: var(--primary-color);
+  font-size: 2.2rem;
+  margin-bottom: 8px;
+}
+
+.cake-subtitle {
+  font-size: 0.95rem;
+  margin-bottom: 25px;
+}
+
+/* Interactive 3D CSS Birthday Cake */
+.cake-container {
+  position: relative;
+  width: 200px;
+  height: 180px;
+  margin: 20px 0 35px 0;
+}
+
+.cake-layer {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 12px 12px 6px 6px;
+  box-shadow: inset 0 6px 0 rgba(255, 255, 255, 0.35), 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.layer-bottom {
+  bottom: 0;
+  width: 190px;
+  height: 60px;
+  background: #ff758f; /* Soft Pearl Pink */
+  border: 2px solid #e05775;
+}
+
+.layer-bottom::before {
+  content: '';
+  position: absolute;
+  top: 15px;
+  width: 100%;
+  height: 12px;
+  background: #fee440; /* Yellow Cream Strip */
+}
+
+.layer-middle {
+  bottom: 52px;
+  width: 150px;
+  height: 52px;
+  background: #00bbf9; /* Romantic Sky Blue */
+  border: 2px solid #0096c7;
+  z-index: 2;
+}
+
+.layer-middle::before {
+  content: '';
+  position: absolute;
+  top: 13px;
+  width: 100%;
+  height: 10px;
+  background: #ffb3c1; /* Soft Rose Cream Strip */
+}
+
+.layer-top {
+  bottom: 96px;
+  width: 110px;
+  height: 44px;
+  background: #fee440; /* Gold Cream Layer */
+  border: 2px solid #d4af37;
+  z-index: 3;
+}
+
+.layer-top::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  height: 8px;
+  background: #00f5d4; /* Mint Cream Strip */
+}
+
+/* Candle Containers & Flames */
+.candle-container {
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90px;
+  height: 35px;
+  z-index: 4;
+  display: flex;
+  justify-content: space-around;
+}
+
+.candle {
+  position: relative;
+  width: 8px;
+  height: 38px;
+  background: linear-gradient(to right, #ff9e00, #ffb703);
+  border-radius: 3px 3px 0 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.candle::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: 3px;
+  width: 2px;
+  height: 4px;
+  background: #444; /* Wick */
+}
+
+.flame {
+  position: absolute;
+  top: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 16px;
+  background: radial-gradient(circle at bottom, #fee440 20%, #ff003c 85%);
+  border-radius: 50% 50% 20% 20%;
+  animation: flicker 0.15s infinite alternate;
+  box-shadow: 0 0 12px #fee440, 0 0 25px #ff003c;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.flame:hover {
+  transform: translateX(-50%) scale(1.25);
+}
+
+/* Blown Out state for Candle */
+.candle.blown .flame {
+  opacity: 0;
+  transform: translateX(-50%) scale(0) translateY(-10px);
+  pointer-events: none;
+}
+
+@keyframes flicker {
+  0% { transform: translateX(-50%) rotate(-1deg) scale(1); }
+  100% { transform: translateX(-50%) rotate(1.5deg) scale(1.08); }
+}
+
+/* Wish Reveal Box styling */
+.wish-reveal-box {
+  margin-top: 15px;
+  padding-top: 25px;
+  border-top: 1px dashed var(--border-glass);
+  width: 100%;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.wish-reveal-box.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.wish-title {
+  font-family: var(--font-luxury);
+  color: var(--primary-color);
+  font-size: 1.85rem;
+  margin-bottom: 15px;
+  text-shadow: 0 0 10px var(--primary-glow);
+}
+
+.wish-text {
+  font-size: 1.05rem;
+  color: var(--text-primary);
+  line-height: 1.8;
+  font-style: italic;
+  font-family: var(--font-luxury);
+}
+
+/* Floating Balloons Wrapper & Items */
+.balloons-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1002;
+  overflow: hidden;
+}
+
+.floating-balloon {
+  position: absolute;
+  bottom: -150px;
+  border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
+  cursor: pointer;
+  pointer-events: auto;
+  animation: floatUp 12s linear forwards;
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.2s ease;
+  z-index: 1003;
+}
+
+.floating-balloon:hover {
+  transform: scale(1.1);
+}
+
+.balloon-string {
+  position: absolute;
+  bottom: -24px;
+  left: 50%;
+  width: 1.5px;
+  height: 25px;
+  background: rgba(61, 0, 20, 0.2);
+}
+
+.floating-balloon.popped {
+  transform: scale(0) !important;
+  opacity: 0;
+  pointer-events: none;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-50vh) rotate(5deg) translateX(20px);
+  }
+  100% {
+    transform: translateY(-120vh) rotate(-5deg) translateX(-20px);
+  }
+}
+

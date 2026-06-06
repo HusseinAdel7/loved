@@ -169,6 +169,37 @@
     <p class="footer-credits" data-translate="footer_credits">&copy; 2026. All rights reserved. My Hearts Belongs To You.</p>
   </footer>
 
+  <!-- 6. Virtual Birthday Cake & Wish Ceremony Overlay -->
+  <div class="birthday-cake-overlay" id="cake-ceremony-overlay">
+    <div class="glass-card cake-card text-center">
+      <h3 class="cake-title gold-text font-cursive" data-translate="cake_title">Make a Wish, My Princess Alaa! 🎂</h3>
+      <p class="cake-subtitle text-muted" data-translate="cake_subtitle">Click the burning candles to blow them out...</p>
+      
+      <!-- CSS Birthday Cake -->
+      <div class="cake-container">
+        <div class="cake-layer layer-bottom"></div>
+        <div class="cake-layer layer-middle"></div>
+        <div class="cake-layer layer-top"></div>
+        <div class="candle-container">
+          <div class="candle" id="candle-1"><div class="flame" title="Blow out"></div></div>
+          <div class="candle" id="candle-2"><div class="flame" title="Blow out"></div></div>
+          <div class="candle" id="candle-3"><div class="flame" title="Blow out"></div></div>
+        </div>
+      </div>
+      
+      <!-- Wish Message (revealed after blowing candles) -->
+      <div class="wish-reveal-box" id="cake-wish-box">
+        <h2 class="wish-title text-glow-magenta" data-translate="wish_revealed_title">Your Wish is Safe in My Heart! 🎉</h2>
+        <p class="wish-text" data-translate="wish_revealed_text">Happy Birthday, my gorgeous Alaa! May this year bring you absolute joy, laughter, and everything your beautiful heart desires. I promise to stand by your side and make you smile for all of my forever. ❤</p>
+        <button id="btn-finish-celebration" class="btn-gold-glow mt-4" data-translate="btn_finish_celebration">Complete Celebration & Return</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 7. Balloons Wrapper -->
+  <div class="balloons-wrapper" id="balloons-container"></div>
+
+
   <!-- Audio Floating Controller -->
   <div class="audio-controller">
     <button class="audio-btn" aria-label="Toggle Audio"><i class="fa-solid fa-play"></i></button>
