@@ -1,218 +1,284 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Love Story | Timeline</title>
-  
-  <!-- Bootstrap 5 CSS CDN -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  
-  <!-- FontAwesome 6 Icons CDN -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-  <!-- AOS.js Scroll Reveal CSS -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  
-  <!-- Shared Style Sheets -->
-  <link rel="stylesheet" href="../shared/css/global.css">
-  <link rel="stylesheet" href="../shared/css/navigation.css">
-  
-  <!-- Love Story Page Specific Styles -->
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/media.css">
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Our Love Story | Timeline</title>
+ 
+ <!-- Bootstrap 5 CSS CDN -->
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+ 
+ <!-- FontAwesome 6 Icons CDN -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+ 
+ <!-- AOS.js Scroll Reveal CSS -->
+ <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+ 
+ <!-- Shared Style Sheets -->
+ <link rel="stylesheet" href="../shared/css/global.css">
+ <link rel="stylesheet" href="../shared/css/navigation.css">
+ 
+ <!-- Love Story Page Specific Styles -->
+ <link rel="stylesheet" href="css/style.css">
+ <link rel="stylesheet" href="css/media.css">
 </head>
 <body class="bg-gradient-romantic">
 
-  <!-- Scroll Progress Indicator -->
-  <div class="scroll-progress"></div>
+ <!-- Scroll Progress Indicator -->
+ <div class="scroll-progress"></div>
 
-  <!-- Smooth Page Loader -->
-  <div class="page-loader">
-    <div class="loader-heart">❤</div>
-    <div class="loader-text">Reading Our Chapters...</div>
+ <!-- Smooth Page Loader -->
+ <div class="page-loader">
+  <div class="loader-heart">❤</div>
+  <div class="loader-text">Reading Our Chapters...</div>
+ </div>
+
+ <!-- Shared Custom Navbar Component -->
+ <nav class="custom-navbar">
+  <a href="../index/index.html" class="nav-logo">
+   ❤ <span>With Love</span>
+  </a>
+  
+  <button class="nav-toggle" aria-label="Toggle Navigation">
+   <span></span>
+   <span></span>
+   <span></span>
+  </button>
+  
+  <ul class="nav-menu">
+   <li class="nav-item"><a href="../index/index.html" data-translate="nav_home"><i class="fa-solid fa-house"></i> Home</a></li>
+   <li class="nav-item active"><a href="../love-story/love-story.html" data-translate="nav_story"><i class="fa-solid fa-book-open"></i> Our Story</a></li>
+   <li class="nav-item"><a href="../gallery/gallery.html" data-translate="nav_gallery"><i class="fa-solid fa-images"></i> Memories</a></li>
+   <li class="nav-item"><a href="../countdown/countdown.html" data-translate="nav_countdown"><i class="fa-solid fa-clock"></i> Countdown</a></li>
+   <li class="nav-item"><a href="../reasons/reasons.html" data-translate="nav_reasons"><i class="fa-solid fa-heart-pulse"></i> Why I Love You</a></li>
+   <li class="nav-item"><a href="../surprise/surprise.html" data-translate="nav_surprise"><i class="fa-solid fa-gift"></i> The Surprise</a></li>
+  </ul>
+
+  <!-- Bilingual Actions Panel -->
+  <div class="nav-actions">
+   <div class="nav-key-tracker">🔑 Keys: <span>0/3</span></div>
+   <button class="btn-lang-toggle"><i class="fa-solid fa-globe"></i> EN/AR</button>
   </div>
+ </nav>
 
-  <!-- Shared Custom Navbar Component -->
-  <nav class="custom-navbar">
-    <a href="../index/index.html" class="nav-logo">
-      ❤ <span>With Love</span>
+ <!-- 1. Cinematic Timeline Header -->
+ <header class="timeline-hero">
+  <div class="container text-center">
+   <h1 class="timeline-main-title" data-aos="fade-down" data-aos-duration="1200" data-translate="story_hero_title">The Chapters of Us</h1>
+   <p class="timeline-lead-subtitle" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200" data-translate="story_hero_sub">
+    Tracing the footsteps of how two lives danced into a single forever
+   </p>
+   <div class="timeline-hero-divider" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400">
+    <i class="fa-solid fa-book-heart"></i>
+   </div>
+  </div>
+ </header>
+
+ <!-- 2. Interactive Scrolling Timeline Section -->
+ <section class="timeline-section">
+  <div class="container position-relative">
+   
+   <!-- Central Glowing Golden Timeline Line -->
+   <div class="timeline-glowing-line"></div>
+   
+   <!-- Timeline Node 1: The First Talk -->
+   <div class="timeline-item left-aligned" data-aos="fade-right" data-aos-duration="1000">
+    <div class="timeline-dot-pulse"></div>
+    <div class="timeline-date-badge">20/06 - 05:54 PM</div>
+    <div class="glass-card timeline-card">
+     <div class="card-icon"><i class="fa-solid fa-comments"></i></div>
+     <h3 data-translate="story_ch1_title">Chapter I: The First Talk</h3>
+     <p data-translate="story_ch1_p">On June 20th at 5:54 PM, our paths crossed for the very first time. A simple beginning that opened the doors to a beautiful and promising future.</p>
+    </div>
+   </div>
+
+   <!-- Timeline Node 2: Said I Love U -->
+   <div class="timeline-item right-aligned" data-aos="fade-left" data-aos-duration="1000">
+    <div class="timeline-dot-pulse"></div>
+    <div class="timeline-date-badge">28/07 - 02:28 AM</div>
+    <div class="glass-card timeline-card">
+     <div class="card-icon"><i class="fa-solid fa-heart"></i></div>
+     <h3 data-translate="story_ch2_title">Chapter II: Expressing Feelings</h3>
+     <p data-translate="story_ch2_p">On July 28th at 2:28 AM, we shared our true feelings, acknowledging the special connection and mutual respect growing between us.</p>
+    </div>
+   </div>
+
+    <!-- Timeline Node 3: Calling Uncle -->
+    <div class="timeline-item left-aligned" data-aos="fade-right" data-aos-duration="1000">
+     <div class="timeline-dot-pulse"></div>
+     <div class="timeline-date-badge">06/11 - 02:14 PM</div>
+     <div class="glass-card timeline-card">
+      <div class="card-icon"><i class="fa-solid fa-phone-volume"></i></div>
+      <h3 data-translate="story_ch3_title">Chapter III: Calling Uncle</h3>
+      <p data-translate="story_ch3_p">On November 6th at 2:14 PM, I made the important call to Lolo's father (Uncle), taking the first official step with honor and respect.</p>
+     </div>
+    </div>
+
+    <!-- Timeline Node 4: Calling Aunt -->
+    <div class="timeline-item right-aligned" data-aos="fade-left" data-aos-duration="1000">
+     <div class="timeline-dot-pulse"></div>
+     <div class="timeline-date-badge">06/11 - 09:41 PM</div>
+     <div class="glass-card timeline-card">
+      <div class="card-icon"><i class="fa-solid fa-phone"></i></div>
+      <h3 data-translate="story_ch4_title">Chapter IV: Calling Aunt</h3>
+      <p data-translate="story_ch4_p">On November 6th at 9:41 PM, I spoke with Lolo's mother (Aunt), establishing a warm connection of respect and appreciation with your family.</p>
+     </div>
+    </div>
+
+   <!-- Timeline Node 5: Met Your Family -->
+   <div class="timeline-item left-aligned" data-aos="fade-right" data-aos-duration="1000">
+    <div class="timeline-dot-pulse"></div>
+    <div class="timeline-date-badge">19/11 - 06:44 PM</div>
+    <div class="glass-card timeline-card">
+     <div class="card-icon"><i class="fa-solid fa-people-roof"></i></div>
+     <h3 data-translate="story_ch5_title">Chapter V: Meeting Your Family</h3>
+     <p data-translate="story_ch5_p">On November 19th at 6:44 PM, I had the honor of meeting your family in person. A wonderful gathering filled with warm hospitality and joy.</p>
+    </div>
+   </div>
+
+   <!-- Timeline Node 6: Met You -->
+   <div class="timeline-item right-aligned" data-aos="fade-left" data-aos-duration="1000">
+    <div class="timeline-dot-pulse"></div>
+    <div class="timeline-date-badge">20/11 - 06:28 PM</div>
+    <div class="glass-card timeline-card">
+     <div class="card-icon"><i class="fa-solid fa-handshake"></i></div>
+     <h3 data-translate="story_ch6_title">Chapter VI: Our First Meeting</h3>
+     <p data-translate="story_ch6_p">On November 20th at 6:28 PM, we met in person. Seeing your bright smile and discussing our future goals together was truly inspiring.</p>
+    </div>
+   </div>
+
+   <!-- Timeline Node 7: Buying the Gold -->
+   <div class="timeline-item left-aligned" data-aos="fade-right" data-aos-duration="1000">
+    <div class="timeline-dot-pulse"></div>
+    <div class="timeline-date-badge">03/12 - 06:48 PM</div>
+    <div class="glass-card timeline-card">
+     <div class="card-icon"><i class="fa-solid fa-coins"></i></div>
+     <h3 data-translate="story_ch7_title">Chapter VII: Buying the Gold</h3>
+     <p data-translate="story_ch7_p">On December 3rd at 6:48 PM, we chose the engagement gold together. A happy step in preparing for our formal celebration.</p>
+    </div>
+   </div>
+
+    <!-- Timeline Node 8: Our engagement -->
+    <div class="timeline-item right-aligned" data-aos="fade-left" data-aos-duration="1000">
+     <div class="timeline-dot-pulse"></div>
+     <div class="timeline-date-badge">04/12</div>
+     <div class="glass-card timeline-card">
+      <div class="card-icon"><i class="fa-solid fa-ring"></i></div>
+      <h3 data-translate="story_ch8_title">Chapter VIII: Our Engagement Day</h3>
+      <p data-translate="story_ch8_p">On December 4th, we officially celebrated our engagement, promising before God and our families to build a happy life together.</p>
+     </div>
+    </div>
+
+    <!-- Timeline Node 9: New Year's Eve -->
+    <div class="timeline-item left-aligned" data-aos="fade-right" data-aos-duration="1000">
+     <div class="timeline-dot-pulse"></div>
+     <div class="timeline-date-badge">31/12 - 12:00 AM</div>
+     <div class="glass-card timeline-card">
+      <div class="card-icon"><i class="fa-solid fa-sparkles"></i></div>
+      <h3 data-translate="story_ch9_title">Chapter IX: Welcoming 2026</h3>
+      <p data-translate="story_ch9_p">On December 31st at 12:00 AM, we welcomed the new year 2026 together as fiancé and fiancée, wishing for a lifetime of happiness, peace, and our upcoming wedding.</p>
+     </div>
+    </div>
+
+    <!-- Timeline Node 10: Our First Eid Al-Fitr -->
+    <div class="timeline-item right-aligned" data-aos="fade-left" data-aos-duration="1000">
+     <div class="timeline-dot-pulse"></div>
+     <div class="timeline-date-badge">20/03</div>
+     <div class="glass-card timeline-card">
+      <div class="card-icon"><i class="fa-solid fa-moon"></i></div>
+      <h3 data-translate="story_ch10_title">Chapter X: Our First Eid Al-Fitr</h3>
+      <p data-translate="story_ch10_p">On March 20th, we celebrated our first Eid Al-Fitr together. A beautiful holiday filled with warm family visits, sweet treats, and shared blessings.</p>
+     </div>
+    </div>
+
+    <!-- Timeline Node 11: Our First Eid Al-Adha -->
+    <div class="timeline-item left-aligned" data-aos="fade-right" data-aos-duration="1000">
+     <div class="timeline-dot-pulse"></div>
+     <div class="timeline-date-badge">27/05</div>
+     <div class="glass-card timeline-card">
+      <div class="card-icon"><i class="fa-solid fa-mosque"></i></div>
+      <h3 data-translate="story_ch11_title">Chapter XI: Our First Eid Al-Adha</h3>
+      <p data-translate="story_ch11_p">On May 27th, we celebrated our first Eid Al-Adha together. A blessed occasion of sharing goodness, visiting family, and making beautiful memories.</p>
+     </div>
+    </div>
+
+    <!-- Timeline Node 12: Lolo's Birthday Celebration -->
+    <div class="timeline-item right-aligned animate-today" data-aos="fade-left" data-aos-duration="1000">
+     <div class="timeline-dot-pulse today-pulse"></div>
+     <div class="timeline-date-badge today-badge">05/07</div>
+     <div class="glass-card timeline-card highlight-timeline-card">
+      <div class="card-icon gold-icon"><i class="fa-solid fa-cake-candles"></i></div>
+      <h3 data-translate="story_ch12_title">Chapter XII: Happy Birthday, Lolo!</h3>
+      <p data-translate="story_ch12_p">July 13th is Lolo's birthday, but we are celebrating it today, July 5th! You are the most special person in the world, and I look forward to all our future years together. Happy Birthday!</p>
+      
+      <!-- Hidden Quest Key 1 (Story Key) -->
+      <div class="glowing-quest-key" data-key-name="story" style="bottom: 20px; right: 20px;" title="Find Me! 🔑">
+       <i class="fa-solid fa-key"></i>
+      </div>
+     </div>
+    </div>
+
+  </div>
+ </section>
+
+ <!-- 3. Navigation Call to Action -->
+ <section class="timeline-cta page-section text-center">
+  <div class="container" data-aos="zoom-in" data-aos-duration="1000">
+   <div class="glass-card cta-box max-600">
+    <h2 class="font-cursive gold-text" data-translate="story_cta_title">Our adventure doesn't stop here...</h2>
+    <p class="mb-4 text-muted" data-translate="story_cta_p">Let's walk together into our polaroid gallery of precious captured snapshots.</p>
+    <a href="../gallery/gallery.html" class="btn-gold-glow" data-translate="story_cta_btn">
+     Explore Memories <i class="fa-solid fa-arrow-right"></i>
     </a>
-    
-    <button class="nav-toggle" aria-label="Toggle Navigation">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-    
-    <ul class="nav-menu">
-      <li class="nav-item"><a href="../index/index.html" data-translate="nav_home"><i class="fa-solid fa-house"></i> Home</a></li>
-      <li class="nav-item active"><a href="../love-story/love-story.html" data-translate="nav_story"><i class="fa-solid fa-book-open"></i> Our Story</a></li>
-      <li class="nav-item"><a href="../gallery/gallery.html" data-translate="nav_gallery"><i class="fa-solid fa-images"></i> Memories</a></li>
-      <li class="nav-item"><a href="../countdown/countdown.html" data-translate="nav_countdown"><i class="fa-solid fa-clock"></i> Countdown</a></li>
-      <li class="nav-item"><a href="../reasons/reasons.html" data-translate="nav_reasons"><i class="fa-solid fa-heart-pulse"></i> Why I Love You</a></li>
-      <li class="nav-item"><a href="../surprise/surprise.html" data-translate="nav_surprise"><i class="fa-solid fa-gift"></i> The Surprise</a></li>
-    </ul>
-
-    <!-- Bilingual Actions Panel -->
-    <div class="nav-actions">
-      <div class="nav-key-tracker">🔑 Keys: <span>0/3</span></div>
-      <button class="btn-lang-toggle"><i class="fa-solid fa-globe"></i> EN/AR</button>
-    </div>
-  </nav>
-
-  <!-- 1. Cinematic Timeline Header -->
-  <header class="timeline-hero">
-    <div class="container text-center">
-      <h1 class="timeline-main-title" data-aos="fade-down" data-aos-duration="1200" data-translate="story_hero_title">The Chapters of Us</h1>
-      <p class="timeline-lead-subtitle" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200" data-translate="story_hero_sub">
-        Tracing the footsteps of how two lives danced into a single forever
-      </p>
-      <div class="timeline-hero-divider" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400">
-        <i class="fa-solid fa-book-heart"></i>
-      </div>
-    </div>
-  </header>
-
-  <!-- 2. Interactive Scrolling Timeline Section -->
-  <section class="timeline-section">
-    <div class="container position-relative">
-      
-      <!-- Central Glowing Golden Timeline Line -->
-      <div class="timeline-glowing-line"></div>
-      
-      <!-- Timeline Node 1: The First Meeting -->
-      <div class="timeline-item left-aligned" data-aos="fade-right" data-aos-duration="1000">
-        <div class="timeline-dot-pulse"></div>
-        <div class="timeline-date-badge">Oct 14, 2021</div>
-        <div class="glass-card timeline-card">
-          <div class="card-icon"><i class="fa-solid fa-coffee"></i></div>
-          <h3 data-translate="story_ch1_title">Chapter I: The First Spark</h3>
-          <p data-translate="story_ch1_p">Where it all began. A simple coffee shop, a warm autumn breeze, and a shared glance that changed everything. That very first smile of yours wrote the first sentence of my favorite book. I knew in that single hour that my heart had finally found its home.</p>
-        </div>
-      </div>
-
-      <!-- Timeline Node 2: First Date -->
-      <div class="timeline-item right-aligned" data-aos="fade-left" data-aos-duration="1000">
-        <div class="timeline-dot-pulse"></div>
-        <div class="timeline-date-badge">Nov 03, 2021</div>
-        <div class="glass-card timeline-card">
-          <div class="card-icon"><i class="fa-solid fa-cloud-moon"></i></div>
-          <h3 data-translate="story_ch2_title">Chapter II: Beneath the Stars</h3>
-          <p data-translate="story_ch2_p">Our official first date. Walking under the warm glowing streetlights, laughing at silly things, and talking for hours without wanting the night to end. The magic in the air was undeniable; it was the exact moment the universe whispered that we were meant for forever.</p>
-        </div>
-      </div>
-
-      <!-- Timeline Node 3: First 'I Love You' -->
-      <div class="timeline-item left-aligned" data-aos="fade-right" data-aos-duration="1000">
-        <div class="timeline-dot-pulse"></div>
-        <div class="timeline-date-badge">Feb 14, 2022</div>
-        <div class="glass-card timeline-card">
-          <div class="card-icon"><i class="fa-solid fa-heart-circle-check"></i></div>
-          <h3 data-translate="story_ch3_title">Chapter III: The Whisper</h3>
-          <p data-translate="story_ch3_p">The quiet night those three words slipped from my lips. Time stopped, the ambient noise of the city faded, and looking at you, I felt a deep certainty. Hearing it echoed in your soft voice was the greatest blessing my ears have ever received.</p>
-        </div>
-      </div>
-
-      <!-- Timeline Node 4: The Travels -->
-      <div class="timeline-item right-aligned" data-aos="fade-left" data-aos-duration="1000">
-        <div class="timeline-dot-pulse"></div>
-        <div class="timeline-date-badge">Aug 18, 2022</div>
-        <div class="glass-card timeline-card">
-          <div class="card-icon"><i class="fa-solid fa-plane-departure"></i></div>
-          <h3 data-translate="story_ch4_title">Chapter IV: Wandering Together</h3>
-          <p data-translate="story_ch4_p">Our first big trip. Exploring new cities, sharing local food, and watching breathtaking sunsets from sandy shores. Navigating the world with you proved that any destination is paradise as long as you're holding my hand.</p>
-        </div>
-      </div>
-
-      <!-- Timeline Node 5: The Proposal -->
-      <div class="timeline-item left-aligned" data-aos="fade-right" data-aos-duration="1000">
-        <div class="timeline-dot-pulse"></div>
-        <div class="timeline-date-badge">Dec 24, 2023</div>
-        <div class="glass-card timeline-card highlight-timeline-card">
-          <div class="card-icon gold-icon"><i class="fa-solid fa-ring"></i></div>
-          <h3 data-translate="story_ch5_title">Chapter V: The Promise of Forever</h3>
-          <p data-translate="story_ch5_p">Down on one knee, heart racing, and presenting you with a promise for all eternity. Seeing the tears of pure joy pool in your eyes and hearing your sweet, breathless 'Yes!' was the happiest, most victorious second of my life.</p>
-        </div>
-      </div>
-
-      <!-- Timeline Node 6: Today's Birthday Celebration -->
-      <div class="timeline-item right-aligned animate-today" data-aos="fade-left" data-aos-duration="1000">
-        <div class="timeline-dot-pulse today-pulse"></div>
-        <div class="timeline-date-badge today-badge">May 29, 2026</div>
-        <div class="glass-card timeline-card">
-          <div class="card-icon"><i class="fa-solid fa-cake-candles"></i></div>
-          <h3 data-translate="story_ch6_title">Chapter VI: Happy Birthday!</h3>
-          <p data-translate="story_ch6_p">Today is all about you! Every single chapter we've written so far has been perfect, and yet I know the most beautiful pages are still waiting to be inked. Celebrating you is my favorite daily hobby. Happy Birthday, my beautiful fiancée!</p>
-          
-          <!-- Hidden Quest Key 1 (Story Key) -->
-          <div class="glowing-quest-key" data-key-name="story" style="bottom: 20px; right: 20px;" title="Find Me! 🔑">
-            <i class="fa-solid fa-key"></i>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- 3. Navigation Call to Action -->
-  <section class="timeline-cta page-section text-center">
-    <div class="container" data-aos="zoom-in" data-aos-duration="1000">
-      <div class="glass-card cta-box max-600">
-        <h2 class="font-cursive gold-text" data-translate="story_cta_title">Our adventure doesn't stop here...</h2>
-        <p class="mb-4 text-muted" data-translate="story_cta_p">Let's walk together into our polaroid gallery of precious captured snapshots.</p>
-        <a href="../gallery/gallery.html" class="btn-gold-glow" data-translate="story_cta_btn">
-          Explore Memories <i class="fa-solid fa-arrow-right"></i>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Shared Romantic Footer Component -->
-  <footer class="romantic-footer">
-    <p class="footer-quote font-cursive" data-translate="footer_quote_story">"Every chapter is a masterpiece with you."</p>
-    <div class="footer-divider"></div>
-    <div class="footer-nav">
-      <a href="../index/index.html" class="footer-nav-link" data-translate="nav_home">Home</a>
-      <a href="../love-story/love-story.html" class="footer-nav-link" data-translate="nav_story">Our Story</a>
-      <a href="../gallery/gallery.html" class="footer-nav-link" data-translate="nav_gallery">Memories</a>
-      <a href="../countdown/countdown.html" class="footer-nav-link" data-translate="nav_countdown">Countdown</a>
-      <a href="../reasons/reasons.html" class="footer-nav-link" data-translate="nav_reasons">Why I Love You</a>
-      <a href="../surprise/surprise.html" class="footer-nav-link" data-translate="nav_surprise">The Surprise</a>
-    </div>
-    <p class="footer-details" data-translate="footer_details">Made with infinite love <span>❤</span> for you</p>
-    <p class="footer-credits" data-translate="footer_credits">&copy; 2026. All rights reserved. My Hearts Belongs To You.</p>
-  </footer>
-
-  <!-- Audio Floating Controller -->
-  <div class="audio-controller">
-    <button class="audio-btn" aria-label="Toggle Audio"><i class="fa-solid fa-play"></i></button>
-    <div class="audio-visualizer">
-      <div class="bar"></div>
-      <div class="bar"></div>
-      <div class="bar"></div>
-      <div class="bar"></div>
-    </div>
+   </div>
   </div>
+ </section>
 
-  <!-- Back to Top Button -->
-  <div class="back-to-top" aria-label="Back to Top"><i class="fa-solid fa-arrow-up"></i></div>
+ <!-- Shared Romantic Footer Component -->
+ <footer class="romantic-footer">
+  <p class="footer-quote font-cursive" data-translate="footer_quote_story">"Every chapter is a beautiful milestone with Lolo."</p>
+  <div class="footer-divider"></div>
+  <div class="footer-nav">
+   <a href="../index/index.html" class="footer-nav-link" data-translate="nav_home">Home</a>
+   <a href="../love-story/love-story.html" class="footer-nav-link" data-translate="nav_story">Our Story</a>
+   <a href="../gallery/gallery.html" class="footer-nav-link" data-translate="nav_gallery">Memories</a>
+   <a href="../countdown/countdown.html" class="footer-nav-link" data-translate="nav_countdown">Countdown</a>
+   <a href="../reasons/reasons.html" class="footer-nav-link" data-translate="nav_reasons">Why You are Special</a>
+   <a href="../surprise/surprise.html" class="footer-nav-link" data-translate="nav_surprise">The Greeting</a>
+  </div>
+  <p class="footer-details" data-translate="footer_details">Specially and carefully made for your birthday <span>❤</span> Lolo</p>
+  <p class="footer-credits" data-translate="footer_credits">&copy; 2026. Happy Birthday to my dear fiancée Lolo.</p>
+ </footer>
 
-  <!-- Core Javascript Files -->
-  <!-- Bootstrap 5 Bundle JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- AOS Scroll Reveal JS -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <!-- GSAP Core Animations -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+ <!-- Audio Floating Controller -->
+ <div class="audio-controller">
+  <button class="audio-btn" aria-label="Toggle Audio"><i class="fa-solid fa-play"></i></button>
+  <div class="audio-visualizer">
+   <div class="bar"></div>
+   <div class="bar"></div>
+   <div class="bar"></div>
+   <div class="bar"></div>
+  </div>
+ </div>
 
-  <!-- Shared Translation Data -->
-  <script src="../shared/js/translations.js"></script>
-  <!-- Shared Global JS Components -->
-  <script src="../shared/js/global.js"></script>
-  <script src="../shared/js/hearts.js"></script>
+ <!-- Back to Top Button -->
+ <div class="back-to-top" aria-label="Back to Top"><i class="fa-solid fa-arrow-up"></i></div>
 
-  <!-- Love Story Page Specific JS -->
-  <script src="js/script.js"></script>
+ <!-- Core Javascript Files -->
+ <!-- Bootstrap 5 Bundle JS -->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+ <!-- AOS Scroll Reveal JS -->
+ <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+ <!-- GSAP Core Animations -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+ <!-- Shared Translation Data -->
+ <script src="../shared/js/translations.js"></script>
+ <!-- Shared Global JS Components -->
+ <script src="../shared/js/global.js"></script>
+ <script src="../shared/js/hearts.js"></script>
+
+ <!-- Love Story Page Specific JS -->
+ <script src="js/script.js"></script>
 </body>
 </html>

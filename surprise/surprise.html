@@ -1,234 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Birthday Surprise | My Eternity</title>
-  
-  <!-- Bootstrap 5 CSS CDN -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  
-  <!-- FontAwesome 6 Icons CDN -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-  <!-- AOS.js Scroll Reveal CSS -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  
-  <!-- Shared Style Sheets -->
-  <link rel="stylesheet" href="../shared/css/global.css">
-  <link rel="stylesheet" href="../shared/css/navigation.css">
-  
-  <!-- Surprise Page Specific Styles -->
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/media.css">
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Your Birthday Surprise | My Eternity</title>
+ 
+ <!-- Bootstrap 5 CSS CDN -->
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+ 
+ <!-- FontAwesome 6 Icons CDN -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+ 
+ <!-- AOS.js Scroll Reveal CSS -->
+ <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+ 
+ <!-- Shared Style Sheets -->
+ <link rel="stylesheet" href="../shared/css/global.css">
+ <link rel="stylesheet" href="../shared/css/navigation.css">
+ 
+ <!-- Surprise Page Specific Styles -->
+ <link rel="stylesheet" href="css/style.css">
+ <link rel="stylesheet" href="css/media.css">
 </head>
 <body class="bg-gradient-romantic">
 
-  <!-- Scroll Progress Indicator -->
-  <div class="scroll-progress"></div>
+ <!-- Scroll Progress Indicator -->
+ <div class="scroll-progress"></div>
 
-  <!-- Smooth Page Loader -->
-  <div class="page-loader">
-    <div class="loader-heart">❤</div>
-    <div class="loader-text">Preparing Your Surprise...</div>
+ <!-- Smooth Page Loader -->
+ <div class="page-loader">
+  <div class="loader-heart">❤</div>
+  <div class="loader-text">Preparing Your Surprise...</div>
+ </div>
+
+ <!-- Fullscreen Fireworks & Confetti Canvas Engine -->
+ <canvas id="fireworks-canvas"></canvas>
+
+ <!-- Shared Custom Navbar Component -->
+ <nav class="custom-navbar">
+  <a href="../index/index.html" class="nav-logo">
+   ❤ <span>With Love</span>
+  </a>
+  
+  <button class="nav-toggle" aria-label="Toggle Navigation">
+   <span></span>
+   <span></span>
+   <span></span>
+  </button>
+  
+  <ul class="nav-menu">
+   <li class="nav-item"><a href="../index/index.html" data-translate="nav_home"><i class="fa-solid fa-house"></i> Home</a></li>
+   <li class="nav-item"><a href="../love-story/love-story.html" data-translate="nav_story"><i class="fa-solid fa-book-open"></i> Our Story</a></li>
+   <li class="nav-item"><a href="../gallery/gallery.html" data-translate="nav_gallery"><i class="fa-solid fa-images"></i> Memories</a></li>
+   <li class="nav-item"><a href="../countdown/countdown.html" data-translate="nav_countdown"><i class="fa-solid fa-clock"></i> Countdown</a></li>
+   <li class="nav-item"><a href="../reasons/reasons.html" data-translate="nav_reasons"><i class="fa-solid fa-heart-pulse"></i> Why I Love You</a></li>
+   <li class="nav-item active"><a href="../surprise/surprise.html" data-translate="nav_surprise"><i class="fa-solid fa-gift"></i> The Surprise</a></li>
+  </ul>
+
+  <!-- Bilingual Actions Panel -->
+  <div class="nav-actions">
+   <div class="nav-key-tracker">🔑 Keys: <span>0/3</span></div>
+   <button class="btn-lang-toggle"><i class="fa-solid fa-globe"></i> EN/AR</button>
   </div>
+ </nav>
 
-  <!-- Fullscreen Fireworks & Confetti Canvas Engine -->
-  <canvas id="fireworks-canvas"></canvas>
+ <!-- 1. Cinematic Surprise Header -->
+ <header class="surprise-hero" id="surprise-header-block">
+  <div class="container text-center">
+   <h1 class="surprise-main-title" data-aos="fade-down" data-aos-duration="1200" data-translate="surprise_hero_title">The Final Gateway</h1>
+   <p class="surprise-lead-subtitle" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200" data-translate="surprise_hero_sub">
+    You have traveled our chapters. Break the seal to read the deepest promise of my soul.
+   </p>
+   <div class="title-heart-divider" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400">❤</div>
+  </div>
+ </header>
 
-  <!-- Shared Custom Navbar Component -->
-  <nav class="custom-navbar">
-    <a href="../index/index.html" class="nav-logo">
-      ❤ <span>With Love</span>
+ <!-- 2. Cinematic Unfolding Envelope Section -->
+ <section class="envelope-unveiling-section">
+  <div class="container d-flex justify-content-center align-items-center">
+   
+   <div class="luxury-envelope-container" id="grand-envelope">
+    <!-- Letter Panel sticking inside -->
+    <div class="letter-sheet">
+     <div class="sheet-scroller-box">
+      <h2 data-translate="surprise_letter_title">My Beautiful Fiancée,</h2>
+      <p data-translate="surprise_letter_p1">From the moment you walked into my world, you turned every ordinary second into a breathtaking milestone. You are the laugh that brightens my days, the peace that settles my storms, and the home my heart has searched for forever.</p>
+      <p data-translate="surprise_letter_p2">Today is a celebration of the day you were born, the day the universe gave me my absolute greatest gift. I promise to love you, cherish you, support your grandest dreams, and hold your hand through every season of life yet to come.</p>
+      <p data-translate="surprise_letter_p3">You are my today, my tomorrow, and all of my forever. Loving you is the easiest, most natural vow I have ever made, and I will keep making it with every heartbeat.</p>
+      <p data-translate="surprise_letter_p4">Happy Birthday, my gorgeous princess. With all of me, for all of us.</p>
+      <div class="letter-sign-off">
+       <p class="font-cursive gold-text" data-translate="surprise_letter_sign1">- Yours Eternally,</p>
+       <p class="font-cursive gold-text" data-translate="surprise_letter_sign2">Your Forever Love ❤</p>
+      </div>
+      
+      <button id="btn-close-scroll" class="btn-magenta-glow btn-sm mt-4" data-translate="surprise_letter_close">Close Scroll</button>
+     </div>
+    </div>
+
+    <!-- Outer Envelope flaps -->
+    <div class="outer-envelope">
+     <div class="outer-flap"></div>
+     <div class="outer-bottom"></div>
+     <div class="wax-seal-btn" id="trigger-seal">
+      <i class="fa-solid fa-heart"></i>
+     </div>
+    </div>
+   </div>
+
+  </div>
+ </section>
+
+ <!-- 3. Giant Neon Glowing Typography (fades in when fireworks trigger) -->
+ <div class="fullscreen-neon-declaration" id="neon-declaration-block">
+  <h1 class="neon-glow-magenta">HAPPY BIRTHDAY, LOLO</h1>
+  <h2 class="neon-glow-gold font-cursive">BEST WISHES</h2>
+ </div>
+
+ <!-- 4. Interactive Heart Key Quest Lock Overlay Screen -->
+ <div class="lightbox-overlay active" id="quest-lock-overlay" style="display: none;">
+  <div class="lightbox-content-box" style="max-width: 520px;">
+   <div class="glass-card text-center" style="border: 1px solid var(--primary-color); padding: 45px 30px; box-shadow: 0 0 35px var(--primary-glow); border-radius: 24px;">
+    <div class="lock-icon-box" style="font-size: 3.8rem; color: var(--primary-color); margin-bottom: 25px; animation: heart-beat 1.5s infinite ease-in-out;">
+     <i class="fa-solid fa-lock"></i>
+    </div>
+    <h3 data-translate="quest_locked_title" style="color: var(--accent-gold); text-shadow: 0 0 10px var(--accent-gold-glow); font-size: 1.5rem; margin-bottom: 15px;">Dear Lolo, This Greeting Is Sealed 🔒</h3>
+    <p data-translate="quest_locked_p" style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 25px;">To unlock this final envelope and reveal your special birthday greeting, Lolo, you must collect the 3 Hidden Keys scattered across our chapters!</p>
+    
+    <div class="quest-hints-container text-start" style="background: rgba(10,1,12,0.45); border: 1px solid var(--border-glass); border-radius: 15px; padding: 20px; margin-bottom: 30px;">
+     <h5 data-translate="quest_hint_title" style="color: var(--accent-gold); font-size: 0.95rem; margin-bottom: 12px; font-weight: 600;">🔍 Where to find them:</h5>
+     <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.85rem; color: var(--text-muted); line-height: 1.9;">
+      <li data-translate="quest_hint_1" style="margin-bottom: 8px;">🔑 **First Key**: Hidden in our historical milestones timeline (Our Story).</li>
+      <li data-translate="quest_hint_2" style="margin-bottom: 8px;">🔑 **Second Key**: Hidden inside the final polaroid proposal card (Memories).</li>
+      <li data-translate="quest_hint_3">🔑 **Third Key**: Hidden behind the 6th card of what makes you special (Reasons).</li>
+     </ul>
+    </div>
+    
+    <a href="../love-story/love-story.html" class="btn-gold-glow btn-sm" data-translate="quest_hint_btn">Go Search for Keys</a>
+   </div>
+  </div>
+ </div>
+
+ <!-- 5. Navigation Call to Action -->
+ <section class="surprise-cta page-section text-center" id="surprise-footer-cta">
+  <div class="container" data-aos="fade-up" data-aos-duration="1000">
+   <div class="glass-card cta-box max-600">
+    <h2 class="font-cursive gold-text" data-translate="surprise_cta_title">Back to our beginning...</h2>
+    <p class="mb-4 text-muted" data-translate="surprise_cta_p">Restart our journey or return to the main dashboard.</p>
+    <a href="../index/index.html" class="btn-gold-glow" data-translate="surprise_cta_btn">
+     Return to Home <i class="fa-solid fa-house"></i>
     </a>
-    
-    <button class="nav-toggle" aria-label="Toggle Navigation">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-    
-    <ul class="nav-menu">
-      <li class="nav-item"><a href="../index/index.html" data-translate="nav_home"><i class="fa-solid fa-house"></i> Home</a></li>
-      <li class="nav-item"><a href="../love-story/love-story.html" data-translate="nav_story"><i class="fa-solid fa-book-open"></i> Our Story</a></li>
-      <li class="nav-item"><a href="../gallery/gallery.html" data-translate="nav_gallery"><i class="fa-solid fa-images"></i> Memories</a></li>
-      <li class="nav-item"><a href="../countdown/countdown.html" data-translate="nav_countdown"><i class="fa-solid fa-clock"></i> Countdown</a></li>
-      <li class="nav-item"><a href="../reasons/reasons.html" data-translate="nav_reasons"><i class="fa-solid fa-heart-pulse"></i> Why I Love You</a></li>
-      <li class="nav-item active"><a href="../surprise/surprise.html" data-translate="nav_surprise"><i class="fa-solid fa-gift"></i> The Surprise</a></li>
-    </ul>
-
-    <!-- Bilingual Actions Panel -->
-    <div class="nav-actions">
-      <div class="nav-key-tracker">🔑 Keys: <span>0/3</span></div>
-      <button class="btn-lang-toggle"><i class="fa-solid fa-globe"></i> EN/AR</button>
-    </div>
-  </nav>
-
-  <!-- 1. Cinematic Surprise Header -->
-  <header class="surprise-hero" id="surprise-header-block">
-    <div class="container text-center">
-      <h1 class="surprise-main-title" data-aos="fade-down" data-aos-duration="1200" data-translate="surprise_hero_title">The Final Gateway</h1>
-      <p class="surprise-lead-subtitle" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200" data-translate="surprise_hero_sub">
-        You have traveled our chapters. Break the seal to read the deepest promise of my soul.
-      </p>
-      <div class="title-heart-divider" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400">❤</div>
-    </div>
-  </header>
-
-  <!-- 2. Cinematic Unfolding Envelope Section -->
-  <section class="envelope-unveiling-section">
-    <div class="container d-flex justify-content-center align-items-center">
-      
-      <div class="luxury-envelope-container" id="grand-envelope">
-        <!-- Letter Panel sticking inside -->
-        <div class="letter-sheet">
-          <div class="sheet-scroller-box">
-            <h2 data-translate="surprise_letter_title">My Beautiful Fiancée,</h2>
-            <p data-translate="surprise_letter_p1">From the moment you walked into my world, you turned every ordinary second into a breathtaking milestone. You are the laugh that brightens my days, the peace that settles my storms, and the home my heart has searched for forever.</p>
-            <p data-translate="surprise_letter_p2">Today is a celebration of the day you were born, the day the universe gave me my absolute greatest gift. I promise to love you, cherish you, support your grandest dreams, and hold your hand through every season of life yet to come.</p>
-            <p data-translate="surprise_letter_p3">You are my today, my tomorrow, and all of my forever. Loving you is the easiest, most natural vow I have ever made, and I will keep making it with every heartbeat.</p>
-            <p data-translate="surprise_letter_p4">Happy Birthday, my gorgeous princess. With all of me, for all of us.</p>
-            <div class="letter-sign-off">
-              <p class="font-cursive gold-text" data-translate="surprise_letter_sign1">- Yours Eternally,</p>
-              <p class="font-cursive gold-text" data-translate="surprise_letter_sign2">Your Forever Love ❤</p>
-            </div>
-            
-            <button id="btn-close-scroll" class="btn-magenta-glow btn-sm mt-4" data-translate="surprise_letter_close">Close Scroll</button>
-          </div>
-        </div>
-
-        <!-- Outer Envelope flaps -->
-        <div class="outer-envelope">
-          <div class="outer-flap"></div>
-          <div class="outer-bottom"></div>
-          <div class="wax-seal-btn" id="trigger-seal">
-            <i class="fa-solid fa-heart"></i>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- 3. Giant Neon Glowing Typography (fades in when fireworks trigger) -->
-  <div class="fullscreen-neon-declaration" id="neon-declaration-block">
-    <h1 class="neon-glow-magenta">I LOVE YOU FOREVER</h1>
-    <h2 class="neon-glow-gold font-cursive">&amp; ALWAYS</h2>
+   </div>
   </div>
+ </section>
 
-  <!-- 4. Interactive Heart Key Quest Lock Overlay Screen -->
-  <div class="lightbox-overlay active" id="quest-lock-overlay" style="display: none;">
-    <div class="lightbox-content-box" style="max-width: 520px;">
-      <div class="glass-card text-center" style="border: 1px solid var(--primary-color); padding: 45px 30px; box-shadow: 0 0 35px var(--primary-glow); border-radius: 24px;">
-        <div class="lock-icon-box" style="font-size: 3.8rem; color: var(--primary-color); margin-bottom: 25px; animation: heart-beat 1.5s infinite ease-in-out;">
-          <i class="fa-solid fa-lock"></i>
-        </div>
-        <h3 data-translate="quest_locked_title" style="color: var(--accent-gold); text-shadow: 0 0 10px var(--accent-gold-glow); font-size: 1.5rem; margin-bottom: 15px;">My Love, The Gift Is Sealed 🔒</h3>
-        <p data-translate="quest_locked_p" style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 25px;">To unlock this final envelope and reveal your grand surprise, you must embark on a small journey to retrieve the 3 Hidden Keys of Hearts scattered across our chapters!</p>
-        
-        <div class="quest-hints-container text-start" style="background: rgba(10,1,12,0.45); border: 1px solid var(--border-glass); border-radius: 15px; padding: 20px; margin-bottom: 30px;">
-          <h5 data-translate="quest_hint_title" style="color: var(--accent-gold); font-size: 0.95rem; margin-bottom: 12px; font-weight: 600;">🔍 Where to find them:</h5>
-          <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.85rem; color: var(--text-muted); line-height: 1.9;">
-            <li data-translate="quest_hint_1" style="margin-bottom: 8px;">🔑 **First Key**: Hidden in our historical milestones timeline (Our Story).</li>
-            <li data-translate="quest_hint_2" style="margin-bottom: 8px;">🔑 **Second Key**: Hidden inside the final polaroid proposal card (Memories).</li>
-            <li data-translate="quest_hint_3">🔑 **Third Key**: Hidden behind the 6th flip card on why I love you (Reasons).</li>
-          </ul>
-        </div>
-        
-        <a href="../love-story/love-story.html" class="btn-gold-glow btn-sm" data-translate="quest_hint_btn">Go Search for Keys</a>
-      </div>
-    </div>
+ <!-- Shared Romantic Footer Component -->
+ <footer class="romantic-footer" id="surprise-shared-footer">
+  <p class="footer-quote font-cursive" data-translate="footer_quote_surprise">"Wishing you a happy birthday and a blessed year, Lolo."</p>
+  <div class="footer-divider"></div>
+  <div class="footer-nav">
+   <a href="../index/index.html" class="footer-nav-link" data-translate="nav_home">Home</a>
+   <a href="../love-story/love-story.html" class="footer-nav-link" data-translate="nav_story">Our Story</a>
+   <a href="../gallery/gallery.html" class="footer-nav-link" data-translate="nav_gallery">Memories</a>
+   <a href="../countdown/countdown.html" class="footer-nav-link" data-translate="nav_countdown">Countdown</a>
+   <a href="../reasons/reasons.html" class="footer-nav-link" data-translate="nav_reasons">Why You are Special</a>
+   <a href="../surprise/surprise.html" class="footer-nav-link" data-translate="nav_surprise">The Greeting</a>
   </div>
+  <p class="footer-details" data-translate="footer_details">Specially and carefully made for your birthday <span>❤</span> Lolo</p>
+  <p class="footer-credits" data-translate="footer_credits">&copy; 2026. Happy Birthday to my dear fiancée Lolo.</p>
+ </footer>
 
-  <!-- 5. Navigation Call to Action -->
-  <section class="surprise-cta page-section text-center" id="surprise-footer-cta">
-    <div class="container" data-aos="fade-up" data-aos-duration="1000">
-      <div class="glass-card cta-box max-600">
-        <h2 class="font-cursive gold-text" data-translate="surprise_cta_title">Back to our beginning...</h2>
-        <p class="mb-4 text-muted" data-translate="surprise_cta_p">Restart our love journey or return to the main dashboard.</p>
-        <a href="../index/index.html" class="btn-gold-glow" data-translate="surprise_cta_btn">
-          Return to Home <i class="fa-solid fa-house"></i>
-        </a>
-      </div>
+ <!-- 6. Virtual Birthday Cake & Wish Ceremony Overlay -->
+ <div class="birthday-cake-overlay" id="cake-ceremony-overlay">
+  <div class="glass-card cake-card text-center">
+   <h3 class="cake-title gold-text font-cursive" data-translate="cake_title">Make a Wish, Lolo! 🎂</h3>
+   <p class="cake-subtitle text-muted" data-translate="cake_subtitle">Click the burning candles to blow them out...</p>
+   
+   <!-- CSS Birthday Cake -->
+   <div class="cake-container">
+    <div class="cake-layer layer-bottom"></div>
+    <div class="cake-layer layer-middle"></div>
+    <div class="cake-layer layer-top"></div>
+    <div class="candle-container">
+     <div class="candle" id="candle-1"><div class="flame" title="Blow out"></div></div>
+     <div class="candle" id="candle-2"><div class="flame" title="Blow out"></div></div>
+     <div class="candle" id="candle-3"><div class="flame" title="Blow out"></div></div>
     </div>
-  </section>
-
-  <!-- Shared Romantic Footer Component -->
-  <footer class="romantic-footer" id="surprise-shared-footer">
-    <p class="footer-quote font-cursive" data-translate="footer_quote_surprise">"My heart beats only for you, today and forever."</p>
-    <div class="footer-divider"></div>
-    <div class="footer-nav">
-      <a href="../index/index.html" class="footer-nav-link" data-translate="nav_home">Home</a>
-      <a href="../love-story/love-story.html" class="footer-nav-link" data-translate="nav_story">Our Story</a>
-      <a href="../gallery/gallery.html" class="footer-nav-link" data-translate="nav_gallery">Memories</a>
-      <a href="../countdown/countdown.html" class="footer-nav-link" data-translate="nav_countdown">Countdown</a>
-      <a href="../reasons/reasons.html" class="footer-nav-link" data-translate="nav_reasons">Why I Love You</a>
-      <a href="../surprise/surprise.html" class="footer-nav-link" data-translate="nav_surprise">The Surprise</a>
-    </div>
-    <p class="footer-details" data-translate="footer_details">Made with infinite love <span>❤</span> for you</p>
-    <p class="footer-credits" data-translate="footer_credits">&copy; 2026. All rights reserved. My Hearts Belongs To You.</p>
-  </footer>
-
-  <!-- 6. Virtual Birthday Cake & Wish Ceremony Overlay -->
-  <div class="birthday-cake-overlay" id="cake-ceremony-overlay">
-    <div class="glass-card cake-card text-center">
-      <h3 class="cake-title gold-text font-cursive" data-translate="cake_title">Make a Wish, My Princess Alaa! 🎂</h3>
-      <p class="cake-subtitle text-muted" data-translate="cake_subtitle">Click the burning candles to blow them out...</p>
-      
-      <!-- CSS Birthday Cake -->
-      <div class="cake-container">
-        <div class="cake-layer layer-bottom"></div>
-        <div class="cake-layer layer-middle"></div>
-        <div class="cake-layer layer-top"></div>
-        <div class="candle-container">
-          <div class="candle" id="candle-1"><div class="flame" title="Blow out"></div></div>
-          <div class="candle" id="candle-2"><div class="flame" title="Blow out"></div></div>
-          <div class="candle" id="candle-3"><div class="flame" title="Blow out"></div></div>
-        </div>
-      </div>
-      
-      <!-- Wish Message (revealed after blowing candles) -->
-      <div class="wish-reveal-box" id="cake-wish-box">
-        <h2 class="wish-title text-glow-magenta" data-translate="wish_revealed_title">Your Wish is Safe in My Heart! 🎉</h2>
-        <p class="wish-text" data-translate="wish_revealed_text">Happy Birthday, my gorgeous Alaa! May this year bring you absolute joy, laughter, and everything your beautiful heart desires. I promise to stand by your side and make you smile for all of my forever. ❤</p>
-        <button id="btn-finish-celebration" class="btn-gold-glow mt-4" data-translate="btn_finish_celebration">Complete Celebration & Return</button>
-      </div>
-    </div>
+   </div>
+   
+   <!-- Wish Message (revealed after blowing candles) -->
+   <div class="wish-reveal-box" id="cake-wish-box">
+    <h2 class="wish-title text-glow-magenta" data-translate="wish_revealed_title">Your Wish is Safe! 🎉</h2>
+    <p class="wish-text" data-translate="wish_revealed_text">Happy Birthday, Lolo! May this year bring you absolute joy, success, and everything you desire. We look forward to a beautiful future together. ❤</p>
+    <button id="btn-finish-celebration" class="btn-gold-glow mt-4" data-translate="btn_finish_celebration">Complete Celebration & Return</button>
+   </div>
   </div>
+ </div>
 
-  <!-- 7. Balloons Wrapper -->
-  <div class="balloons-wrapper" id="balloons-container"></div>
+ <!-- 7. Balloons Wrapper -->
+ <div class="balloons-wrapper" id="balloons-container"></div>
 
 
-  <!-- Audio Floating Controller -->
-  <div class="audio-controller">
-    <button class="audio-btn" aria-label="Toggle Audio"><i class="fa-solid fa-play"></i></button>
-    <div class="audio-visualizer">
-      <div class="bar"></div>
-      <div class="bar"></div>
-      <div class="bar"></div>
-      <div class="bar"></div>
-    </div>
+ <!-- Audio Floating Controller -->
+ <div class="audio-controller">
+  <button class="audio-btn" aria-label="Toggle Audio"><i class="fa-solid fa-play"></i></button>
+  <div class="audio-visualizer">
+   <div class="bar"></div>
+   <div class="bar"></div>
+   <div class="bar"></div>
+   <div class="bar"></div>
   </div>
+ </div>
 
-  <!-- Back to Top Button -->
-  <div class="back-to-top" aria-label="Back to Top"><i class="fa-solid fa-arrow-up"></i></div>
+ <!-- Back to Top Button -->
+ <div class="back-to-top" aria-label="Back to Top"><i class="fa-solid fa-arrow-up"></i></div>
 
-  <!-- Core Javascript Files -->
-  <!-- Bootstrap 5 Bundle JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- AOS Scroll Reveal JS -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <!-- GSAP Core Animations -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+ <!-- Core Javascript Files -->
+ <!-- Bootstrap 5 Bundle JS -->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+ <!-- AOS Scroll Reveal JS -->
+ <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+ <!-- GSAP Core Animations -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 
-  <!-- Shared Translation Data -->
-  <script src="../shared/js/translations.js"></script>
-  <!-- Shared Global JS Components -->
-  <script src="../shared/js/global.js"></script>
-  <script src="../shared/js/hearts.js"></script>
+ <!-- Shared Translation Data -->
+ <script src="../shared/js/translations.js"></script>
+ <!-- Shared Global JS Components -->
+ <script src="../shared/js/global.js"></script>
+ <script src="../shared/js/hearts.js"></script>
 
-  <!-- Surprise Page Specific JS -->
-  <script src="js/script.js"></script>
+ <!-- Surprise Page Specific JS -->
+ <script src="js/script.js"></script>
 </body>
 </html>

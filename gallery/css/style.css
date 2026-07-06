@@ -338,3 +338,23 @@
 
 .arrow-left { left: 40px; }
 .arrow-right { right: 40px; }
+
+/* Real Image Support */
+.polaroid-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.polaroid-card:hover .polaroid-img {
+  transform: scale(1.1);
+}
+
+.lightbox-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #000;
+  border-radius: 20px;
+}

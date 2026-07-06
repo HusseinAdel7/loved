@@ -1,313 +1,379 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Memories | Photo Gallery</title>
-  
-  <!-- Bootstrap 5 CSS CDN -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  
-  <!-- FontAwesome 6 Icons CDN -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-  <!-- AOS.js Scroll Reveal CSS -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  
-  <!-- Shared Style Sheets -->
-  <link rel="stylesheet" href="../shared/css/global.css">
-  <link rel="stylesheet" href="../shared/css/navigation.css">
-  
-  <!-- Gallery Page Specific Styles -->
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/media.css">
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Our Memories | Photo Gallery</title>
+ 
+ <!-- Bootstrap 5 CSS CDN -->
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+ 
+ <!-- FontAwesome 6 Icons CDN -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+ 
+ <!-- AOS.js Scroll Reveal CSS -->
+ <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+ 
+ <!-- Shared Style Sheets -->
+ <link rel="stylesheet" href="../shared/css/global.css">
+ <link rel="stylesheet" href="../shared/css/navigation.css">
+ 
+ <!-- Gallery Page Specific Styles -->
+ <link rel="stylesheet" href="css/style.css">
+ <link rel="stylesheet" href="css/media.css">
 </head>
 <body class="bg-gradient-romantic">
 
-  <!-- Scroll Progress Indicator -->
-  <div class="scroll-progress"></div>
+ <!-- Scroll Progress Indicator -->
+ <div class="scroll-progress"></div>
 
-  <!-- Smooth Page Loader -->
-  <div class="page-loader">
-    <div class="loader-heart">❤</div>
-    <div class="loader-text">Opening Our Photo Album...</div>
+ <!-- Smooth Page Loader -->
+ <div class="page-loader">
+  <div class="loader-heart">❤</div>
+  <div class="loader-text">Opening Our Photo Album...</div>
+ </div>
+
+ <!-- Shared Custom Navbar Component -->
+ <nav class="custom-navbar">
+  <a href="../index/index.html" class="nav-logo">
+   ❤ <span>With Love</span>
+  </a>
+  
+  <button class="nav-toggle" aria-label="Toggle Navigation">
+   <span></span>
+   <span></span>
+   <span></span>
+  </button>
+  
+  <ul class="nav-menu">
+   <li class="nav-item"><a href="../index/index.html" data-translate="nav_home"><i class="fa-solid fa-house"></i> Home</a></li>
+   <li class="nav-item"><a href="../love-story/love-story.html" data-translate="nav_story"><i class="fa-solid fa-book-open"></i> Our Story</a></li>
+   <li class="nav-item active"><a href="../gallery/gallery.html" data-translate="nav_gallery"><i class="fa-solid fa-images"></i> Memories</a></li>
+   <li class="nav-item"><a href="../countdown/countdown.html" data-translate="nav_countdown"><i class="fa-solid fa-clock"></i> Countdown</a></li>
+   <li class="nav-item"><a href="../reasons/reasons.html" data-translate="nav_reasons"><i class="fa-solid fa-heart-pulse"></i> Why I Love You</a></li>
+   <li class="nav-item"><a href="../surprise/surprise.html" data-translate="nav_surprise"><i class="fa-solid fa-gift"></i> The Surprise</a></li>
+  </ul>
+
+  <!-- Bilingual Actions Panel -->
+  <div class="nav-actions">
+   <div class="nav-key-tracker">🔑 Keys: <span>0/3</span></div>
+   <button class="btn-lang-toggle"><i class="fa-solid fa-globe"></i> EN/AR</button>
   </div>
+ </nav>
 
-  <!-- Shared Custom Navbar Component -->
-  <nav class="custom-navbar">
-    <a href="../index/index.html" class="nav-logo">
-      ❤ <span>With Love</span>
+ <!-- 1. Cinematic Gallery Header -->
+ <header class="gallery-hero">
+  <div class="container text-center">
+   <h1 class="gallery-main-title" data-aos="fade-down" data-aos-duration="1200" data-translate="gallery_hero_title">Our Frozen Moments</h1>
+   <p class="gallery-lead-subtitle" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200" data-translate="gallery_hero_sub">
+    A romantic polaroid album capturing the laughter, adventures, and sweet details of us
+   </p>
+   <div class="title-heart-divider" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400">❤</div>
+  </div>
+ </header>
+
+ <!-- 2. Dynamic Category Filtering Tabs -->
+ <section class="gallery-filter-section text-center">
+  <div class="container" data-aos="fade-up" data-aos-duration="1000">
+   <div class="filter-group-container glass-card">
+     <button class="btn-filter active" data-filter="all" data-translate="gallery_btn_all">All Photos</button>
+     <button class="btn-filter" data-filter="engagement" data-translate="gallery_btn_trips">Engagement & Gold</button>
+     <button class="btn-filter" data-filter="meetings" data-translate="gallery_btn_dates">Our Meetings</button>
+     <button class="btn-filter" data-filter="unforgettable" data-translate="gallery_btn_sweet">Unforgettable Moments</button>
+   </div>
+  </div>
+ </section>
+
+ <!-- 3. Polaroid Grid Layout -->
+ <section class="gallery-grid-section page-section">
+  <div class="container">
+   <div class="row g-4 justify-content-center" id="gallery-masonry">
+    
+    <!-- Polaroid Card 1: First Meeting -->
+    <div class="col-xl-3 col-lg-4 col-md-6 gallery-item" data-category="meetings" data-aos="zoom-in" data-aos-duration="800">
+     <div class="polaroid-card">
+      <div class="polaroid-photo-wrapper">
+       <img src="../assets/images/اول لقاء/5931762634132754091.jpg" class="polaroid-img" alt="First Meeting">
+      </div>
+      <div class="polaroid-caption">
+       <h4 data-translate="gallery_card1_title">First Meeting</h4>
+       <p data-translate="gallery_card1_sub">03 November 2021 • Cozy Cafe</p>
+      </div>
+     </div>
+    </div>
+
+    <!-- Polaroid Card 2: Engagement Gold -->
+    <div class="col-xl-3 col-lg-4 col-md-6 gallery-item" data-category="engagement" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="50">
+     <div class="polaroid-card">
+      <div class="polaroid-photo-wrapper">
+       <img src="../assets/images/يوم شبكتنا/5931762634132754090.jpg" class="polaroid-img" alt="Buying Gold">
+      </div>
+      <div class="polaroid-caption">
+       <h4 data-translate="gallery_card2_title">Our Engagement Gold</h4>
+       <p data-translate="gallery_card2_sub">03 December 2025 • Gold Shop</p>
+      </div>
+     </div>
+    </div>
+
+    <!-- Polaroid Card 3: Our Engagement -->
+    <div class="col-xl-3 col-lg-4 col-md-6 gallery-item" data-category="engagement" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="100">
+     <div class="polaroid-card" style="position: relative;">
+      <div class="polaroid-photo-wrapper">
+       <img src="../assets/images/خطوبتنا السعيدة/5931762634132754089.jpg" class="polaroid-img" alt="Our Engagement">
+      </div>
+      <div class="polaroid-caption">
+       <h4 data-translate="gallery_card3_title">Our Happy Engagement</h4>
+       <p data-translate="gallery_card3_sub">04 December 2025 • Celebration Hall</p>
+      </div>
+      <!-- Hidden Quest Key 2 (Gallery Key) -->
+      <div class="glowing-quest-key" data-key-name="gallery" style="position: absolute; top: -10px; right: -10px;" title="Find Me! 🔑">
+       <i class="fa-solid fa-key"></i>
+      </div>
+     </div>
+    </div>
+
+    <!-- Polaroid Card 4: Occasion 1 -->
+    <div class="col-xl-3 col-lg-4 col-md-6 gallery-item" data-category="meetings" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="150">
+     <div class="polaroid-card">
+      <div class="polaroid-photo-wrapper">
+       <img src="../assets/images/مناسبات/5931762634132754076.jpg" class="polaroid-img" alt="Beautiful Outing">
+      </div>
+      <div class="polaroid-caption">
+       <h4 data-translate="gallery_card4_title">Beautiful Outing</h4>
+       <p data-translate="gallery_card4_sub">Special Occasion</p>
+      </div>
+     </div>
+    </div>
+
+    <!-- Polaroid Card 5: Occasion 2 -->
+    <div class="col-xl-3 col-lg-4 col-md-6 gallery-item" data-category="meetings" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
+     <div class="polaroid-card">
+      <div class="polaroid-photo-wrapper">
+       <img src="../assets/images/مناسبات/5931762634132754077.jpg" class="polaroid-img" alt="Family Occasion">
+      </div>
+      <div class="polaroid-caption">
+       <h4 data-translate="gallery_card5_title">Family Occasion</h4>
+       <p data-translate="gallery_card5_sub">Joyful Day</p>
+      </div>
+     </div>
+    </div>
+
+    <!-- Polaroid Card 6: Occasion 3 -->
+    <div class="col-xl-3 col-lg-4 col-md-6 gallery-item" data-category="meetings" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="250">
+     <div class="polaroid-card">
+      <div class="polaroid-photo-wrapper">
+       <img src="../assets/images/مناسبات/5931762634132754078.jpg" class="polaroid-img" alt="Sweet Gathering">
+      </div>
+      <div class="polaroid-caption">
+       <h4 data-translate="gallery_card6_title">Sweet Gathering</h4>
+       <p data-translate="gallery_card6_sub">Warm Day</p>
+      </div>
+     </div>
+    </div>
+
+    <!-- Polaroid Card 7: Unforgettable 1 -->
+    <div class="col-xl-3 col-lg-4 col-md-6 gallery-item" data-category="unforgettable" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="300">
+     <div class="polaroid-card">
+      <div class="polaroid-photo-wrapper">
+       <img src="../assets/images/لحظات لا تنسي/5931762634132754075.jpg" class="polaroid-img" alt="Happy Smile">
+      </div>
+      <div class="polaroid-caption">
+       <h4 data-translate="gallery_card7_title">Happy Smile</h4>
+       <p data-translate="gallery_card7_sub">Glowing Joy</p>
+      </div>
+     </div>
+    </div>
+
+    <!-- Polaroid Card 8: Unforgettable 2 -->
+    <div class="col-xl-3 col-lg-4 col-md-6 gallery-item" data-category="unforgettable" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="350">
+     <div class="polaroid-card">
+      <div class="polaroid-photo-wrapper">
+       <img src="../assets/images/لحظات لا تنسي/5931762634132754079.jpg" class="polaroid-img" alt="Sweet Snapshot">
+      </div>
+      <div class="polaroid-caption">
+       <h4 data-translate="gallery_card8_title">Sweet Snapshot</h4>
+       <p data-translate="gallery_card8_sub">Cherished Day</p>
+      </div>
+     </div>
+    </div>
+
+    <!-- Polaroid Card 9: Unforgettable 3 -->
+    <div class="col-xl-3 col-lg-4 col-md-6 gallery-item" data-category="unforgettable" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="400">
+     <div class="polaroid-card">
+      <div class="polaroid-photo-wrapper">
+       <img src="../assets/images/لحظات لا تنسي/5931762634132754080.jpg" class="polaroid-img" alt="Cherished Memory">
+      </div>
+      <div class="polaroid-caption">
+       <h4 data-translate="gallery_card9_title">Cherished Memory</h4>
+       <p data-translate="gallery_card9_sub">Unforgettable Time</p>
+      </div>
+     </div>
+    </div>
+
+    <!-- Polaroid Card 10: Unforgettable 4 -->
+    <div class="col-xl-3 col-lg-4 col-md-6 gallery-item" data-category="unforgettable" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="450">
+     <div class="polaroid-card">
+      <div class="polaroid-photo-wrapper">
+       <img src="../assets/images/لحظات لا تنسي/5931762634132754081.jpg" class="polaroid-img" alt="Warm Glance">
+      </div>
+      <div class="polaroid-caption">
+       <h4 data-translate="gallery_card10_title">Warm Glance</h4>
+       <p data-translate="gallery_card10_sub">Sweet Day</p>
+      </div>
+     </div>
+    </div>
+
+    <!-- Polaroid Card 11: Unforgettable 5 -->
+    <div class="col-xl-3 col-lg-4 col-md-6 gallery-item" data-category="unforgettable" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="500">
+     <div class="polaroid-card">
+      <div class="polaroid-photo-wrapper">
+       <img src="../assets/images/لحظات لا تنسي/5931762634132754082.jpg" class="polaroid-img" alt="Peaceful Day">
+      </div>
+      <div class="polaroid-caption">
+       <h4 data-translate="gallery_card11_title">Peaceful Day</h4>
+       <p data-translate="gallery_card11_sub">Cozy Moment</p>
+      </div>
+     </div>
+    </div>
+
+    <!-- Polaroid Card 12: Unforgettable 6 -->
+    <div class="col-xl-3 col-lg-4 col-md-6 gallery-item" data-category="unforgettable" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="550">
+     <div class="polaroid-card">
+      <div class="polaroid-photo-wrapper">
+       <img src="../assets/images/لحظات لا تنسي/5931762634132754083.jpg" class="polaroid-img" alt="Shared Laughs">
+      </div>
+      <div class="polaroid-caption">
+       <h4 data-translate="gallery_card12_title">Shared Laughs</h4>
+       <p data-translate="gallery_card12_sub">Beautiful Memories</p>
+      </div>
+     </div>
+    </div>
+
+    <!-- Polaroid Card 13: Unforgettable 7 -->
+    <div class="col-xl-3 col-lg-4 col-md-6 gallery-item" data-category="unforgettable" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="600">
+     <div class="polaroid-card">
+      <div class="polaroid-photo-wrapper">
+       <img src="../assets/images/لحظات لا تنسي/5931762634132754084.jpg" class="polaroid-img" alt="Unforgettable Day">
+      </div>
+      <div class="polaroid-caption">
+       <h4 data-translate="gallery_card13_title">Unforgettable Day</h4>
+       <p data-translate="gallery_card13_sub">Great Joy</p>
+      </div>
+     </div>
+    </div>
+
+    <!-- Polaroid Card 14: Unforgettable 8 -->
+    <div class="col-xl-3 col-lg-4 col-md-6 gallery-item" data-category="unforgettable" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="650">
+     <div class="polaroid-card">
+      <div class="polaroid-photo-wrapper">
+       <img src="../assets/images/لحظات لا تنسي/5931762634132754087.jpg" class="polaroid-img" alt="Together Forever">
+      </div>
+      <div class="polaroid-caption">
+       <h4 data-translate="gallery_card14_title">Together Forever</h4>
+       <p data-translate="gallery_card14_sub">Our Future Path</p>
+      </div>
+     </div>
+    </div>
+
+    <!-- Polaroid Card 15: Unforgettable 9 -->
+    <div class="col-xl-3 col-lg-4 col-md-6 gallery-item" data-category="unforgettable" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="700">
+     <div class="polaroid-card">
+      <div class="polaroid-photo-wrapper">
+       <img src="../assets/images/لحظات لا تنسي/5931762634132754088.jpg" class="polaroid-img" alt="Cozy Moment">
+      </div>
+      <div class="polaroid-caption">
+       <h4 data-translate="gallery_card15_title">Cozy Moment</h4>
+       <p data-translate="gallery_card15_sub">Sweet Chapter</p>
+      </div>
+     </div>
+    </div>
+
+   </div>
+  </div>
+ </section>
+
+ <!-- 4. Interactive Custom Lightbox Overlay -->
+ <div class="lightbox-overlay" id="gallery-lightbox">
+  <button class="lightbox-close" aria-label="Close Lightbox"><i class="fa-solid fa-xmark"></i></button>
+  <button class="lightbox-arrow arrow-left" aria-label="Previous Slide"><i class="fa-solid fa-angle-left"></i></button>
+  
+  <div class="lightbox-content-box">
+   <!-- Custom visualizer for abstract artwork -->
+   <div class="lightbox-visual-display" id="lightbox-art">
+    <img id="lightbox-img" src="" alt="Lightbox Image" class="lightbox-img">
+   </div>
+   
+   <div class="lightbox-details-panel glass-card">
+    <h3 id="lightbox-title">Paris Sunset</h3>
+    <p id="lightbox-subtitle">Oct 14, 2022 • France</p>
+    <div class="lightbox-divider"></div>
+    <p id="lightbox-caption" class="lightbox-quote font-cursive">
+     "That sunset in Paris was beautiful, but it couldn't compete with the glow on your beautiful face."
+    </p>
+   </div>
+  </div>
+  
+  <button class="lightbox-arrow arrow-right" aria-label="Next Slide"><i class="fa-solid fa-angle-right"></i></button>
+ </div>
+
+ <!-- 5. Navigation Call to Action -->
+ <section class="gallery-cta page-section text-center">
+  <div class="container" data-aos="fade-up" data-aos-duration="1000">
+   <div class="glass-card cta-box max-600">
+    <h2 class="font-cursive gold-text" data-translate="gallery_cta_title">Every second counts with you...</h2>
+    <p class="mb-4 text-muted" data-translate="gallery_cta_sub">Let's check in on the ticking stars of your birthday countdown.</p>
+    <a href="../countdown/countdown.html" class="btn-gold-glow" data-translate="gallery_cta_btn">
+     See Birthday Countdown <i class="fa-solid fa-clock"></i>
     </a>
-    
-    <button class="nav-toggle" aria-label="Toggle Navigation">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-    
-    <ul class="nav-menu">
-      <li class="nav-item"><a href="../index/index.html" data-translate="nav_home"><i class="fa-solid fa-house"></i> Home</a></li>
-      <li class="nav-item"><a href="../love-story/love-story.html" data-translate="nav_story"><i class="fa-solid fa-book-open"></i> Our Story</a></li>
-      <li class="nav-item active"><a href="../gallery/gallery.html" data-translate="nav_gallery"><i class="fa-solid fa-images"></i> Memories</a></li>
-      <li class="nav-item"><a href="../countdown/countdown.html" data-translate="nav_countdown"><i class="fa-solid fa-clock"></i> Countdown</a></li>
-      <li class="nav-item"><a href="../reasons/reasons.html" data-translate="nav_reasons"><i class="fa-solid fa-heart-pulse"></i> Why I Love You</a></li>
-      <li class="nav-item"><a href="../surprise/surprise.html" data-translate="nav_surprise"><i class="fa-solid fa-gift"></i> The Surprise</a></li>
-    </ul>
-
-    <!-- Bilingual Actions Panel -->
-    <div class="nav-actions">
-      <div class="nav-key-tracker">🔑 Keys: <span>0/3</span></div>
-      <button class="btn-lang-toggle"><i class="fa-solid fa-globe"></i> EN/AR</button>
-    </div>
-  </nav>
-
-  <!-- 1. Cinematic Gallery Header -->
-  <header class="gallery-hero">
-    <div class="container text-center">
-      <h1 class="gallery-main-title" data-aos="fade-down" data-aos-duration="1200" data-translate="gallery_hero_title">Our Frozen Moments</h1>
-      <p class="gallery-lead-subtitle" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200" data-translate="gallery_hero_sub">
-        A romantic polaroid album capturing the laughter, adventures, and sweet details of us
-      </p>
-      <div class="title-heart-divider" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400">❤</div>
-    </div>
-  </header>
-
-  <!-- 2. Dynamic Category Filtering Tabs -->
-  <section class="gallery-filter-section text-center">
-    <div class="container" data-aos="fade-up" data-aos-duration="1000">
-      <div class="filter-group-container glass-card">
-        <button class="btn-filter active" data-filter="all" data-translate="gallery_btn_all">All Moments</button>
-        <button class="btn-filter" data-filter="trips" data-translate="gallery_btn_trips">Our Trips</button>
-        <button class="btn-filter" data-filter="dates" data-translate="gallery_btn_dates">Special Dates</button>
-        <button class="btn-filter" data-filter="sweet" data-translate="gallery_btn_sweet">Sweet Moments</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- 3. Polaroid Grid Layout -->
-  <section class="gallery-grid-section page-section">
-    <div class="container">
-      <div class="row g-4 justify-content-center" id="gallery-masonry">
-        
-        <!-- Polaroid Card 1: Trips -->
-        <div class="col-xl-3 col-lg-4 col-md-6 gallery-item" data-category="trips" data-aos="zoom-in" data-aos-duration="800">
-          <div class="polaroid-card">
-            <div class="polaroid-photo-wrapper">
-              <div class="polaroid-placeholder gradient-sunset">
-                <i class="fa-solid fa-plane-departure absolute-icon"></i>
-                <div class="glow-bubble"></div>
-              </div>
-            </div>
-            <div class="polaroid-caption">
-              <h4 data-translate="gallery_card1_title">Paris Sunset</h4>
-              <p data-translate="gallery_card1_sub">Oct 14, 2022 • France</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Polaroid Card 2: Dates -->
-        <div class="col-xl-3 col-lg-4 col-md-6 gallery-item" data-category="dates" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="100">
-          <div class="polaroid-card">
-            <div class="polaroid-photo-wrapper">
-              <div class="polaroid-placeholder gradient-candlelight">
-                <i class="fa-solid fa-wine-glass absolute-icon"></i>
-                <div class="glow-bubble"></div>
-              </div>
-            </div>
-            <div class="polaroid-caption">
-              <h4 data-translate="gallery_card2_title">First Dinner</h4>
-              <p data-translate="gallery_card2_sub">Nov 03, 2021 • Cozy Bistro</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Polaroid Card 3: Sweet -->
-        <div class="col-xl-3 col-lg-4 col-md-6 gallery-item" data-category="sweet" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
-          <div class="polaroid-card">
-            <div class="polaroid-photo-wrapper">
-              <div class="polaroid-placeholder gradient-rose">
-                <i class="fa-solid fa-spa absolute-icon"></i>
-                <div class="glow-bubble"></div>
-              </div>
-            </div>
-            <div class="polaroid-caption">
-              <h4 data-translate="gallery_card3_title">Cozy Sundays</h4>
-              <p data-translate="gallery_card3_sub">Jan 08, 2023 • Our Home</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Polaroid Card 4: Trips -->
-        <div class="col-xl-3 col-lg-4 col-md-6 gallery-item" data-category="trips" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="300">
-          <div class="polaroid-card">
-            <div class="polaroid-photo-wrapper">
-              <div class="polaroid-placeholder gradient-ocean">
-                <i class="fa-solid fa-umbrella-beach absolute-icon"></i>
-                <div class="glow-bubble"></div>
-              </div>
-            </div>
-            <div class="polaroid-caption">
-              <h4 data-translate="gallery_card4_title">Sandy Sunsets</h4>
-              <p data-translate="gallery_card4_sub">Jul 22, 2023 • Seaside Cove</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Polaroid Card 5: Dates -->
-        <div class="col-xl-3 col-lg-4 col-md-6 gallery-item" data-category="dates" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="400">
-          <div class="polaroid-card">
-            <div class="polaroid-photo-wrapper">
-              <div class="polaroid-placeholder gradient-aurora">
-                <i class="fa-solid fa-guitar absolute-icon"></i>
-                <div class="glow-bubble"></div>
-              </div>
-            </div>
-            <div class="polaroid-caption">
-              <h4 data-translate="gallery_card5_title">Acoustic Concert</h4>
-              <p data-translate="gallery_card5_sub">Sep 12, 2023 • Under Stars</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Polaroid Card 6: Sweet -->
-        <div class="col-xl-3 col-lg-4 col-md-6 gallery-item" data-category="sweet" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="500">
-          <div class="polaroid-card" style="position: relative;">
-            <div class="polaroid-photo-wrapper">
-              <div class="polaroid-placeholder gradient-love">
-                <i class="fa-solid fa-heart absolute-icon"></i>
-                <div class="glow-bubble"></div>
-              </div>
-            </div>
-            <div class="polaroid-caption">
-              <h4 data-translate="gallery_card6_title">The Big "Yes"</h4>
-              <p data-translate="gallery_card6_sub">Dec 24, 2023 • Snowy Hill</p>
-            </div>
-
-            <!-- Hidden Quest Key 2 (Gallery Key) -->
-            <div class="glowing-quest-key" data-key-name="gallery" style="position: absolute; top: -10px; right: -10px;" title="Find Me! 🔑">
-              <i class="fa-solid fa-key"></i>
-            </div>
-          </div>
-        </div>
-
-        <!-- Polaroid Card 7: Trips -->
-        <div class="col-xl-3 col-lg-4 col-md-6 gallery-item" data-category="trips" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="600">
-          <div class="polaroid-card">
-            <div class="polaroid-photo-wrapper">
-              <div class="polaroid-placeholder gradient-magic">
-                <i class="fa-solid fa-compass absolute-icon"></i>
-                <div class="glow-bubble"></div>
-              </div>
-            </div>
-            <div class="polaroid-caption">
-              <h4 data-translate="gallery_card7_title">Autumn Walks</h4>
-              <p data-translate="gallery_card7_sub">Oct 18, 2024 • Golden Woods</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Polaroid Card 8: Dates -->
-        <div class="col-xl-3 col-lg-4 col-md-6 gallery-item" data-category="dates" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="700">
-          <div class="polaroid-card">
-            <div class="polaroid-photo-wrapper">
-              <div class="polaroid-placeholder gradient-fire">
-                <i class="fa-solid fa-mug-hot absolute-icon"></i>
-                <div class="glow-bubble"></div>
-              </div>
-            </div>
-            <div class="polaroid-caption">
-              <h4 data-translate="gallery_card8_title">Cozy Fireside</h4>
-              <p data-translate="gallery_card8_sub">Dec 30, 2025 • Mountain Lodge</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- 4. Interactive Custom Lightbox Overlay -->
-  <div class="lightbox-overlay" id="gallery-lightbox">
-    <button class="lightbox-close" aria-label="Close Lightbox"><i class="fa-solid fa-xmark"></i></button>
-    <button class="lightbox-arrow arrow-left" aria-label="Previous Slide"><i class="fa-solid fa-angle-left"></i></button>
-    
-    <div class="lightbox-content-box">
-      <!-- Custom visualizer for abstract artwork -->
-      <div class="lightbox-visual-display" id="lightbox-art">
-        <i id="lightbox-art-icon" class="fa-solid fa-heart"></i>
-      </div>
-      
-      <div class="lightbox-details-panel glass-card">
-        <h3 id="lightbox-title">Paris Sunset</h3>
-        <p id="lightbox-subtitle">Oct 14, 2022 • France</p>
-        <div class="lightbox-divider"></div>
-        <p id="lightbox-caption" class="lightbox-quote font-cursive">
-          "That sunset in Paris was beautiful, but it couldn't compete with the glow on your beautiful face."
-        </p>
-      </div>
-    </div>
-    
-    <button class="lightbox-arrow arrow-right" aria-label="Next Slide"><i class="fa-solid fa-angle-right"></i></button>
+   </div>
   </div>
+ </section>
 
-  <!-- 5. Navigation Call to Action -->
-  <section class="gallery-cta page-section text-center">
-    <div class="container" data-aos="fade-up" data-aos-duration="1000">
-      <div class="glass-card cta-box max-600">
-        <h2 class="font-cursive gold-text" data-translate="gallery_cta_title">Every second counts with you...</h2>
-        <p class="mb-4 text-muted" data-translate="gallery_cta_sub">Let's check in on the ticking stars of your birthday countdown.</p>
-        <a href="../countdown/countdown.html" class="btn-gold-glow" data-translate="gallery_cta_btn">
-          See Birthday Countdown <i class="fa-solid fa-clock"></i>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Shared Romantic Footer Component -->
-  <footer class="romantic-footer">
-    <p class="footer-quote font-cursive" data-translate="footer_quote_gallery">"Moments fade, but our snapshots endure forever."</p>
-    <div class="footer-divider"></div>
-    <div class="footer-nav">
-      <a href="../index/index.html" class="footer-nav-link" data-translate="nav_home">Home</a>
-      <a href="../love-story/love-story.html" class="footer-nav-link" data-translate="nav_story">Our Story</a>
-      <a href="../gallery/gallery.html" class="footer-nav-link" data-translate="nav_gallery">Memories</a>
-      <a href="../countdown/countdown.html" class="footer-nav-link" data-translate="nav_countdown">Countdown</a>
-      <a href="../reasons/reasons.html" class="footer-nav-link" data-translate="nav_reasons">Why I Love You</a>
-      <a href="../surprise/surprise.html" class="footer-nav-link" data-translate="nav_surprise">The Surprise</a>
-    </div>
-    <p class="footer-details" data-translate="footer_details">Made with infinite love <span>❤</span> for you</p>
-    <p class="footer-credits" data-translate="footer_credits">&copy; 2026. All rights reserved. My Hearts Belongs To You.</p>
-  </footer>
-
-  <!-- Audio Floating Controller -->
-  <div class="audio-controller">
-    <button class="audio-btn" aria-label="Toggle Audio"><i class="fa-solid fa-play"></i></button>
-    <div class="audio-visualizer">
-      <div class="bar"></div>
-      <div class="bar"></div>
-      <div class="bar"></div>
-      <div class="bar"></div>
-    </div>
+ <!-- Shared Romantic Footer Component -->
+ <footer class="romantic-footer">
+  <p class="footer-quote font-cursive" data-translate="footer_quote_gallery">"Moments fade, but our snapshots endure forever."</p>
+  <div class="footer-divider"></div>
+  <div class="footer-nav">
+   <a href="../index/index.html" class="footer-nav-link" data-translate="nav_home">Home</a>
+   <a href="../love-story/love-story.html" class="footer-nav-link" data-translate="nav_story">Our Story</a>
+   <a href="../gallery/gallery.html" class="footer-nav-link" data-translate="nav_gallery">Memories</a>
+   <a href="../countdown/countdown.html" class="footer-nav-link" data-translate="nav_countdown">Countdown</a>
+   <a href="../reasons/reasons.html" class="footer-nav-link" data-translate="nav_reasons">Why You are Special</a>
+   <a href="../surprise/surprise.html" class="footer-nav-link" data-translate="nav_surprise">The Greeting</a>
   </div>
+  <p class="footer-details" data-translate="footer_details">Specially and carefully made for your birthday <span>❤</span> Lolo</p>
+  <p class="footer-credits" data-translate="footer_credits">&copy; 2026. Happy Birthday to my dear fiancée Lolo.</p>
+ </footer>
 
-  <!-- Back to Top Button -->
-  <div class="back-to-top" aria-label="Back to Top"><i class="fa-solid fa-arrow-up"></i></div>
+ <!-- Audio Floating Controller -->
+ <div class="audio-controller">
+  <button class="audio-btn" aria-label="Toggle Audio"><i class="fa-solid fa-play"></i></button>
+  <div class="audio-visualizer">
+   <div class="bar"></div>
+   <div class="bar"></div>
+   <div class="bar"></div>
+   <div class="bar"></div>
+  </div>
+ </div>
 
-  <!-- Core Javascript Files -->
-  <!-- Bootstrap 5 Bundle JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- AOS Scroll Reveal JS -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <!-- GSAP Core Animations -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+ <!-- Back to Top Button -->
+ <div class="back-to-top" aria-label="Back to Top"><i class="fa-solid fa-arrow-up"></i></div>
 
-  <!-- Shared Translation Data -->
-  <script src="../shared/js/translations.js"></script>
-  <!-- Shared Global JS Components -->
-  <script src="../shared/js/global.js"></script>
-  <script src="../shared/js/hearts.js"></script>
+ <!-- Core Javascript Files -->
+ <!-- Bootstrap 5 Bundle JS -->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+ <!-- AOS Scroll Reveal JS -->
+ <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+ <!-- GSAP Core Animations -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 
-  <!-- Gallery Page Specific JS -->
-  <script src="js/script.js"></script>
+ <!-- Shared Translation Data -->
+ <script src="../shared/js/translations.js"></script>
+ <!-- Shared Global JS Components -->
+ <script src="../shared/js/global.js"></script>
+ <script src="../shared/js/hearts.js"></script>
+
+ <!-- Gallery Page Specific JS -->
+ <script src="js/script.js"></script>
 </body>
 </html>
